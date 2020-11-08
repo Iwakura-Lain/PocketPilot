@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 623681394440801514}
   - component: {fileID: 1093666149592891963}
   - component: {fileID: 1093666149592891962}
-  - component: {fileID: 1093666149592891964}
+  - component: {fileID: 5144518999425530823}
+  - component: {fileID: 6579234828125054301}
   m_Layer: 0
   m_Name: plane
   m_TagString: Player
@@ -32,7 +33,6 @@ Transform:
   m_Children:
   - {fileID: 5422984015914962741}
   - {fileID: 601564867643826805}
-  - {fileID: 6622746918439033393}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44,12 +44,12 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282620943142639184}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 100
-  m_AngularDrag: 7.88
+  m_Mass: 900
+  m_Drag: 1
+  m_AngularDrag: 5
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!135 &1093666149592891962
@@ -65,7 +65,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1093666149592891964
+--- !u!114 &5144518999425530823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,11 +74,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 282620943142639184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85ec8ff7dd7372e4a9f7bb150550751b, type: 3}
+  m_Script: {fileID: 11500000, guid: bdf7d8015c072cf42ae02d9eba445d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  ExplosionPrefab: {fileID: 0}
+  controller: {fileID: 0}
+  thrust: 100
+  turnTorque: {x: 90, y: 25, z: 45}
+  forceMult: 1000
+  sensitivity: 1
+  aggressiveTurnAngle: 10
+  pitch: 0
+  yaw: 0
+  roll: 0
+--- !u!114 &6579234828125054301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282620943142639184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dcd7524fdbb0734182d15c86105ec5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionPrefab: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
+    type: 3}
+  AfterlifeUI: {fileID: 0}
 --- !u!1 &1251404143283549819
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,80 +180,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &6261113481835603979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6622746918439033393}
-  - component: {fileID: 1115156416512236814}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6622746918439033393
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6261113481835603979}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -3.4053}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 623681394440801514}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!20 &1115156416512236814
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6261113481835603979}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 1e4b7b89205427a4cbccada124dec834, type: 2}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &6507000132123721872
 GameObject:
   m_ObjectHideFlags: 0

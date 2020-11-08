@@ -1,33 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    float currentDestroyedCount = 0;
-    float totalCount = 0;
     public GameObject Enemy;
-    void Start()
+    private float currentDestroyedCount;
+    private float totalCount;
+
+    private void Start()
     {
         Chaser.OnDestroyed += UpdateStatistics;
         Chaser.OnInit += AddToTotalCount;
     }
 
-    void AddToTotalCount()
+    private void AddToTotalCount()
     {
         totalCount++;
     }
 
-    void UpdateStatistics()
+    private void UpdateStatistics()
     {
         currentDestroyedCount++;
     }
 
-    void Spawn()
+    private void Spawn()
     {
-        if(totalCount < currentDestroyedCount)
-        {
-            Instantiate(Enemy, transform.position, Quaternion.identity);
-        }
+        if (totalCount < currentDestroyedCount) Instantiate(Enemy, transform.position, Quaternion.identity);
     }
 }

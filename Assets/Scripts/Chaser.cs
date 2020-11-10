@@ -4,50 +4,37 @@ using UnityEngine;
 public class Chaser : MonoBehaviour
 {
     public delegate void DestroyedAction();
-
     public delegate void InitialAction();
 
-    public float Delay;
-    public float speed;
-
     public GameObject ExplosionPrefab;
-    private Coroutine delayedAngleSet;
 
     private Transform player;
-    private Quaternion playerLastRotation;
-
+    
+    private Rigidbody rigid;
+    public float thrust = 100f;
+    public float forceMult = 1000f;
     private void Start()
     {
         if (OnInit != null)
             OnInit();
+        rigid = GetComponent<Rigidbody>();
+        rigid.mass = 900;
+        rigid.drag = 1;
+        rigid.angularDrag = 5; //rigidbody setup replaces delayed update. later i would add roll
+        
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        UpdateTargetAngle();
     }
 
     private void Update()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation, playerLastRotation, Time.deltaTime * 2);
+        transform.LookAt(player.position);
     }
 
     private void FixedUpdate()
     {
-        transform.position += transform.forward * Time.deltaTime * speed;
-        //transform.position = transform.position * bias + Chase * (1 - bias);
-
-        speed -= transform.forward.y * Time.deltaTime * 50;
-
-        if (speed < 35) speed = 35;
-
-        var TerrainHeightWherePlaneAre = Terrain.activeTerrain.SampleHeight(transform.position);
-        if (TerrainHeightWherePlaneAre > transform.position.y)
-            transform.position = new Vector3(transform.position.x, TerrainHeightWherePlaneAre, transform.position.z);
+        rigid.AddRelativeForce(Vector3.forward * thrust * forceMult, ForceMode.Force);
     }
-
-    private void LateUpdate()
-    {
-        if (player && player.rotation != transform.rotation) UpdateTargetAngle();
-    }
-
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Obsticle") //TODO XD
@@ -57,26 +44,8 @@ public class Chaser : MonoBehaviour
             Destroy(collision.gameObject);
     }
 
-    public static event DestroyedAction OnDestroyed;
-    public static event InitialAction OnInit;
-
-    private void UpdateTargetAngle()
-    {
-        if (delayedAngleSet == null) delayedAngleSet = StartCoroutine(UpdateRotation());
-    }
-
-    private IEnumerator UpdateRotation()
-    {
-        speed -= 1;
-        yield return new WaitForSeconds(Delay);
-        if (player)
-        {
-            playerLastRotation = player.rotation;
-            speed += 1;
-            transform.LookAt(player.position);
-            delayedAngleSet = null;
-        }
-    }
+    public static event DestroyedAction OnDestroyed; 
+    public static event InitialAction OnInit; //sends to statistics for calculating total amount of enemies
 
     private void BlowMe()
     {

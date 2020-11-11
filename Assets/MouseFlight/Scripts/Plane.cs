@@ -21,7 +21,7 @@ namespace MFlight.Demo
         [SerializeField] private MouseFlightController controller = null;
 
         [Header("Physics")]
-        [Tooltip("Force to push plane forwards with")] public float thrust = 100f;
+        [Tooltip("Force to push plane forwards with")] public float thrust = 50;
         [Tooltip("Pitch, Yaw, Roll")] public Vector3 turnTorque = new Vector3(90f, 25f, 45f);
         [Tooltip("Multiplier for all forces")] public float forceMult = 1000f;
 

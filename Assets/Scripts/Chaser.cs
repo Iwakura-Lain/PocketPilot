@@ -11,7 +11,7 @@ public class Chaser : MonoBehaviour
     private Transform player;
     
     private Rigidbody rigid;
-    public float thrust = 100f;
+    public float thrust = 55;
     public float forceMult = 1000f;
     private void Start()
     {

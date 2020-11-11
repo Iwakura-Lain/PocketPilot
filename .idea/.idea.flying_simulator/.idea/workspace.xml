@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
       </list>
     </option>

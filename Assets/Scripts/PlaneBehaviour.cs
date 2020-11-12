@@ -3,6 +3,7 @@
 public class PlaneBehaviour : MonoBehaviour
 {
     public delegate void DestroyedAction();
+
     public GameObject ExplosionPrefab;
     public GameObject AfterlifeUI;
 

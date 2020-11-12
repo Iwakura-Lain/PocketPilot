@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 public class PlaneMovement : MonoBehaviour
 {
     public delegate void DestroyedAction();
+
     [SerializeField] private MFlight.MouseFlightController controller = null;
 
     public float mouseSensitivity;
@@ -16,12 +17,6 @@ public class PlaneMovement : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        // var MoveCam = transform.position - transform.forward * 10 * transform.localScale.x +
-        //               Vector3.up * 2 * transform.localScale.x;
-        // var bias = 0.65f;
-        // Camera.main.transform.position = Camera.main.transform.position * bias + MoveCam * (1 - bias);
-        // Camera.main.transform.LookAt(transform.position);
-
         transform.position += transform.forward * Time.deltaTime * speed;
         transform.LookAt(controller.MouseAimPos);
 

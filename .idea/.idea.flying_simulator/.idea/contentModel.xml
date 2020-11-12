@@ -32,6 +32,7 @@
         <e p="Scripts" t="Include">
           <e p="Chaser.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
+          <e p="Initializer.cs" t="Include" />
           <e p="KillMe.cs" t="Include" />
           <e p="LevelsManager.cs" t="Include" />
           <e p="PlaneBehaviour.cs" t="Include" />

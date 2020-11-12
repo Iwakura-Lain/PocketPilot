@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Statistics : MonoBehaviour //TODO train in interfaces and make stats an interface
@@ -7,12 +8,12 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
     private Text text;
     private float totalCount;
 
-    private void Start()
+    public void Init()
     {
-        text = GetComponent<Text>();
-        Chaser.OnDestroyed += UpdateStatistics;
         PlaneMovement.OnDestroyed += YouHaveBeenCatched;
         Chaser.OnInit += AddToTotalCount;
+        text = GetComponent<Text>();
+        Chaser.OnDestroyed += UpdateStatistics;
     }
 
     private void AddToTotalCount()

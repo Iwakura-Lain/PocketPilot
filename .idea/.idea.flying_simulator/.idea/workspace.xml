@@ -12,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -19,10 +20,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/MouseFlightController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
       </list>
     </option>
   </component>
@@ -80,13 +84,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs</url>
-          <line>24</line>
+          <line>19</line>
           <properties documentPath="C:\Users\mmode\Documents\repositories\flying_simulator\Assets\Scripts\PlaneMovement.cs" initialLine="24">
             <startOffsets>
-              <option value="834" />
+              <option value="476" />
             </startOffsets>
             <endOffsets>
-              <option value="899" />
+              <option value="541" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

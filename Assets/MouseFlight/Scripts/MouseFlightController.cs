@@ -13,18 +13,19 @@ namespace MFlight
     /// </summary>
     public class MouseFlightController : MonoBehaviour
     {
-        [Header("Components")]
-        [SerializeField] [Tooltip("Transform of the aircraft the rig follows and references")]
+        [Header("Components")] [SerializeField] [Tooltip("Transform of the aircraft the rig follows and references")]
         private Transform aircraft = null;
+
         [SerializeField] [Tooltip("Transform of the object the mouse rotates to generate MouseAim position")]
         private Transform mouseAim = null;
+
         [SerializeField] [Tooltip("Transform of the object on the rig which the camera is attached to")]
         private Transform cameraRig = null;
+
         [SerializeField] [Tooltip("Transform of the camera itself")]
         private Transform cam = null;
 
-        [Header("Options")]
-        [SerializeField] [Tooltip("Follow aircraft using fixed update loop")]
+        [Header("Options")] [SerializeField] [Tooltip("Follow aircraft using fixed update loop")]
         private bool useFixed = true;
 
         [SerializeField] [Tooltip("How quickly the camera tracks the mouse aim point.")]
@@ -36,8 +37,7 @@ namespace MFlight
         [SerializeField] [Tooltip("How far the boresight and mouse flight are from the aircraft")]
         private float aimDistance = 500f;
 
-        [Space]
-        [SerializeField] [Tooltip("How far the boresight and mouse flight are from the aircraft")]
+        [Space] [SerializeField] [Tooltip("How far the boresight and mouse flight are from the aircraft")]
         private bool showDebugInfo = false;
 
         private Vector3 frozenDirection = Vector3.forward;
@@ -48,15 +48,10 @@ namespace MFlight
         /// Useful for drawing a crosshair to aim fixed forward guns with, or to indicate what
         /// direction the aircraft is pointed.
         /// </summary>
-        public Vector3 BoresightPos
-        {
-            get
-            {
-                return aircraft == null
-                     ? transform.forward * aimDistance
-                     : (aircraft.transform.forward * aimDistance) + aircraft.transform.position;
-            }
-        }
+        public Vector3 BoresightPos =>
+            aircraft == null
+                ? transform.forward * aimDistance
+                : aircraft.transform.forward * aimDistance + aircraft.transform.position;
 
         /// <summary>
         /// Get the position that the mouse is indicating the aircraft should fly, projected
@@ -67,19 +62,15 @@ namespace MFlight
             get
             {
                 if (mouseAim != null)
-                {
                     return isMouseAimFrozen
                         ? GetFrozenMouseAimPos()
-                        : mouseAim.position + (mouseAim.forward * aimDistance);
-                }
+                        : mouseAim.position + mouseAim.forward * aimDistance;
                 else
-                {
                     return transform.forward * aimDistance;
-                }
             }
         }
 
-        private void Awake()
+        public void Init()
         {
             if (aircraft == null)
                 Debug.LogError(name + "MouseFlightController - No aircraft transform assigned!");
@@ -121,15 +112,15 @@ namespace MFlight
                 isMouseAimFrozen = true;
                 frozenDirection = mouseAim.forward;
             }
-            else if  (Input.GetKeyUp(KeyCode.C))
+            else if (Input.GetKeyUp(KeyCode.C))
             {
                 isMouseAimFrozen = false;
                 mouseAim.forward = frozenDirection;
             }
 
             // Mouse input.
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-            float mouseY = -Input.GetAxis("Mouse Y") * mouseSensitivity;
+            var mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            var mouseY = -Input.GetAxis("Mouse Y") * mouseSensitivity;
 
             // Rotate the aim target that the plane is meant to fly towards.
             // Use the camera's axes in world space so that mouse motion is intuitive.
@@ -139,19 +130,19 @@ namespace MFlight
             // The up vector of the camera normally is aligned to the horizon. However, when
             // looking straight up/down this can feel a bit weird. At those extremes, the camera
             // stops aligning to the horizon and instead aligns to itself.
-            Vector3 upVec = (Mathf.Abs(mouseAim.forward.y) > 0.9f) ? cameraRig.up : Vector3.up;
+            var upVec = Mathf.Abs(mouseAim.forward.y) > 0.9f ? cameraRig.up : Vector3.up;
 
             // Smoothly rotate the camera to face the mouse aim.
             cameraRig.rotation = Damp(cameraRig.rotation,
-                                      Quaternion.LookRotation(mouseAim.forward, upVec),
-                                      camSmoothSpeed,
-                                      Time.deltaTime);
+                Quaternion.LookRotation(mouseAim.forward, upVec),
+                camSmoothSpeed,
+                Time.deltaTime);
         }
 
         private Vector3 GetFrozenMouseAimPos()
         {
             if (mouseAim != null)
-                return mouseAim.position + (frozenDirection * aimDistance);
+                return mouseAim.position + frozenDirection * aimDistance;
             else
                 return transform.forward * aimDistance;
         }
@@ -159,10 +150,8 @@ namespace MFlight
         private void UpdateCameraPos()
         {
             if (aircraft != null)
-            {
                 // Move the whole rig to follow the aircraft.
                 transform.position = aircraft.position;
-            }
         }
 
         // Thanks to Rory Driscoll
@@ -184,7 +173,7 @@ namespace MFlight
         {
             if (showDebugInfo == true)
             {
-                Color oldColor = Gizmos.color;
+                var oldColor = Gizmos.color;
 
                 // Draw the boresight position.
                 if (aircraft != null)

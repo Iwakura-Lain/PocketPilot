@@ -39,6 +39,7 @@
           <e p="PlaneMovement.cs" t="Include" />
           <e p="StartCountdown.cs" t="Include" />
           <e p="Statistics.cs" t="Include" />
+          <e p="Waypoint.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

@@ -13,17 +13,17 @@ public class Chaser : MonoBehaviour
     private Transform player;
 
     private Rigidbody rigid;
-    public float thrust = 110;
-    public float forceMult = 10;
+    private float thrust = 2000;
+    private float forceMult = 10;
 
     public void Init()
     {
         if (OnInit != null)
             OnInit();
         rigid = GetComponent<Rigidbody>();
-        rigid.mass = 900;
-        rigid.drag = 1;
-        rigid.angularDrag = 5; //rigidbody setup replaces delayed update. later i would add roll
+        /*rigid.mass = 700;
+        rigid.drag = 5;
+        rigid.angularDrag = 500;*/ //rigidbody setup replaces delayed update. later i would add roll
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }

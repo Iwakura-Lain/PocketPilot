@@ -18,7 +18,7 @@ public class Plane : MonoBehaviour
     [Tooltip("Pitch, Yaw, Roll")] public Vector3 turnTorque = new Vector3(90f, 25f, 45f);
     [Tooltip("Multiplier for all forces")] private float forceMult = 10f;
 
-    private float sensitivity = 5f;
+    private float sensitivity = 0.5f;
     [Tooltip("Angle at which airplane banks fully into target.")]
     private float aggressiveTurnAngle = 10f;
 

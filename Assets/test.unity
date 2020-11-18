@@ -514,27 +514,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  outlineWidth: 5.19
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-  renderers:
-  - {fileID: 146525447}
-  outlineMaskMaterial: {fileID: 0}
-  outlineFillMaterial: {fileID: 0}
-  needsUpdate: 0
---- !u!23 &146525447 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -8168056147993071433, guid: 6d11008b77a2c50469187ebedd505402,
-    type: 3}
-  m_PrefabInstance: {fileID: 1959704242}
-  m_PrefabAsset: {fileID: 0}
 --- !u!64 &146525448
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Main Cell.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -29,6 +30,8 @@
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/DustEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Toon.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
       </list>
     </option>
@@ -81,6 +84,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="224" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1366.728@0.0.1366.728" timestamp="1604780656772" />
+    <state x="492" y="0" width="630" height="728" key="find.popup" timestamp="1605719686012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="0" width="630" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605719686012" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

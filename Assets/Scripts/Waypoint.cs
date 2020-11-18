@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class Waypoint : MonoBehaviour
     // The target (location, enemy, etc..)
     public Transform target;
     // UI Text to display the distance
-    public Text meter;
+    public TextMeshProUGUI meter;
     // To adjust the position of the icon
     public Vector3 offset;
 

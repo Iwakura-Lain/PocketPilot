@@ -31,8 +31,8 @@
         <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/Toon.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
       </list>
     </option>
   </component>

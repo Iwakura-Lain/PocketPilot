@@ -18,7 +18,7 @@ public class Plane : MonoBehaviour
     [Tooltip("Pitch, Yaw, Roll")] public Vector3 turnTorque = new Vector3(90f, 25f, 45f);
     [Tooltip("Multiplier for all forces")] private float forceMult = 10f;
 
-    private float sensitivity = 0.5f;
+    private float sensitivity = 0.25f;
     [Tooltip("Angle at which airplane banks fully into target.")]
     private float aggressiveTurnAngle = 10f;
 
@@ -69,11 +69,11 @@ public class Plane : MonoBehaviour
         rollOverride = false;
         pitchOverride = false;
 
-        var keyboardRoll = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(keyboardRoll) > .25f) rollOverride = true;
+        var keyboardRoll = Input.GetAxis("Horizontal")  * 0.1f;
+        if (Mathf.Abs(keyboardRoll) > 0) rollOverride = true;
 
-        var keyboardPitch = Input.GetAxis("Vertical");
-        if (Mathf.Abs(keyboardPitch) > .25f)
+        var keyboardPitch = Input.GetAxis("Vertical") * 0.1f;
+        if (Mathf.Abs(keyboardPitch) > 0)
         {
             pitchOverride = true;
             rollOverride = true;

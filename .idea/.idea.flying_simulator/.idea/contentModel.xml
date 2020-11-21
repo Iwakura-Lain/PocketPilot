@@ -4,6 +4,7 @@
     <e p="C:\Users\mmode\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\mmode\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_flying_simulator.-1876317563.00" t="ExcludeRecursive" />
     <e p="C:\Users\mmode\Documents\repositories\flying_simulator" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Ciconia Studio" t="Include">
@@ -39,11 +40,28 @@
             <e p="HiddenNormalsTexture.shader" t="Include" />
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Chaser.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="Initializer.cs" t="Include" />
           <e p="KillMe.cs" t="Include" />
+          <e p="Landing.cs" t="Include" />
           <e p="LevelsManager.cs" t="Include" />
           <e p="PlaneBehaviour.cs" t="Include" />
           <e p="PlaneMovement.cs" t="Include" />

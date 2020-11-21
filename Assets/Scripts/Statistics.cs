@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class Statistics : MonoBehaviour //TODO train in interfaces and make stats an interface
 {
-    private float currentDestroyedCount;
+    private int currentDestroyedCount;
     private Text text;
-    private float totalCount;
+    private int totalCount;
 
     public void Init()
     {
@@ -27,6 +27,9 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
         var s = "You destroyed {0} of {1} enemy jets";
         if (text)
             text.text = string.Format(s, currentDestroyedCount, totalCount);
+
+        if(currentDestroyedCount == totalCount)
+            Waypoint.isThereEnemiesAround = false;
     }
 
     private void YouHaveBeenCatched()

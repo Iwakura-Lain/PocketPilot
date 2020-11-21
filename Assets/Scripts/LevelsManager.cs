@@ -3,11 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Escape)) BackToMenu();
-    }
-
     public void MountainButton()
     {
         SceneManager.LoadScene("s2");
@@ -20,6 +15,7 @@ public class LevelsManager : MonoBehaviour
 
     public void Restart()
     {
+        print("click");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

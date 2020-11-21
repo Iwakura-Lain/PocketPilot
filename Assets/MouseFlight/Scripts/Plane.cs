@@ -46,6 +46,9 @@ public class Plane : MonoBehaviour
         get => roll;
     }
 
+    private bool landing;
+    public static bool OnLanding;
+
     private Rigidbody rigid;
 
     private bool rollOverride = false;
@@ -53,6 +56,7 @@ public class Plane : MonoBehaviour
 
     public void Init()
     {
+        Waypoint.OnFinishLanding += stopLanding;
         rigid = GetComponent<Rigidbody>();
         rigid.mass = 200;
         rigid.drag = 15;
@@ -64,8 +68,6 @@ public class Plane : MonoBehaviour
 
     private void Update()
     {
-        // When the player commands their own stick input, it should override what the
-        // autopilot is trying to do.
         rollOverride = false;
         pitchOverride = false;
 
@@ -90,6 +92,22 @@ public class Plane : MonoBehaviour
         yaw = autoYaw;
         pitch = pitchOverride ? keyboardPitch : autoPitch;
         roll = rollOverride ? keyboardRoll : autoRoll;
+
+        if (OnLanding)
+        {
+            if (Input.GetKey(KeyCode.F))
+                landing = true;
+        }
+
+        if(landing)
+            StartLanding();
+        // else
+        // {
+        //     GetComponent<SphereCollider>().enabled = true;
+        //     if (rigid.mass > 200)
+        //         rigid.mass = 200;
+        //     rigid.useGravity = false;
+        // }
     }
 
     private void RunAutopilot(Vector3 flyTarget, out float yaw, out float pitch, out float roll)
@@ -146,5 +164,19 @@ public class Plane : MonoBehaviour
                 turnTorque.y * yaw,
                 -turnTorque.z * roll) * forceMult,
             ForceMode.Force);
+    }
+
+    public void StartLanding()
+    {
+        rigid.mass = rigid.mass + 15;
+        rigid.useGravity = true;
+        GetComponent<SphereCollider>().enabled = false;
+    }
+
+    void stopLanding()
+    {
+        print("stop");
+        rigid.isKinematic = true;
+        thrust = 0;
     }
 }

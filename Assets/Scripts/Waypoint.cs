@@ -1,20 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-
+using  DG.Tweening;
 public class Waypoint : MonoBehaviour
 {
-    // Indicator icon
     public Image img;
-    // The target (location, enemy, etc..)
     public Transform target;
-    // UI Text to display the distance
-    public TextMeshProUGUI meter;
+    public Text meter;
     // To adjust the position of the icon
     public Vector3 offset;
+    
+    public Text pressF;
+    public Image progressBar;
+    
+    public delegate void LandedAction();
+    public static event LandedAction OnFinishLanding;
 
+    public static bool isThereEnemiesAround;
+    void Start()
+    {
+        isThereEnemiesAround = true;
+        img = GameObject.Find("marker").GetComponent<Image>();
+        meter = GameObject.Find("meter").GetComponent<Text>();
+        pressF = GameObject.Find("hold f").GetComponent<Text>();
+        progressBar = GameObject.Find("progress").GetComponent<Image>();
+    }
     private void Update()
     {
         // Giving limits to the icon so it sticks on the screen
@@ -45,14 +54,42 @@ public class Waypoint : MonoBehaviour
                 pos.x = minX;
             }
         }
-
         // Limit the X and Y positions
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-        // Update the marker's position
         img.transform.position = pos;
-        // Change the meter text to the distance with the meter unit 'm'
+        
         meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
+        if ((int) Vector3.Distance(target.position, transform.position) < 3)
+        {
+            if (isThereEnemiesAround)
+            {
+                meter.color = img.color = Color.red;
+                pressF.enabled = true;
+                pressF.text = "you can not land if there are enemies around";
+            }
+            else
+            {
+                meter.color = img.color = Color.green; 
+                pressF.text = "hold F tp land";
+                Plane.OnLanding = pressF.enabled = true;
+                if (Input.GetKey(KeyCode.F))
+                {
+                    progressBar.DOFillAmount(1, 2).OnComplete(() => { OnLand(); });
+                }
+            }
+        }
+        else
+        {
+            meter.color = img.color =  Color.white;
+            Plane.OnLanding = pressF.enabled = false;
+        }
+    }
+
+    void OnLand()
+    {
+         if (OnFinishLanding != null)
+             OnFinishLanding();
     }
 }

@@ -106,6 +106,8 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="Tutorial.cs" t="Include" />
+        <e p="TutorialEnd.cs" t="Include" />
       </e>
       <e p="flying_simulator.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

@@ -30,6 +30,9 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
 
         if(currentDestroyedCount == totalCount)
             Waypoint.isThereEnemiesAround = false;
+        
+        if(totalCount > 0)
+            Waypoint.isThereEnemiesAround = true;
     }
 
     private void YouHaveBeenCatched()

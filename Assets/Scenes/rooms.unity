@@ -727,45 +727,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4889278216827635688, guid: 6d11008b77a2c50469187ebedd505402, type: 3}
---- !u!1 &401862927 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7391043796754282505, guid: 15d700cbffea5294ca912b21988c6d6e,
-    type: 3}
-  m_PrefabInstance: {fileID: 633603093}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &401862932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401862927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572391365eec5d946ad82acde3a5db5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &402081487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3540447681490457598, guid: 15d700cbffea5294ca912b21988c6d6e,
-    type: 3}
-  m_PrefabInstance: {fileID: 633603093}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &402081488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402081487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c5ce23e52e2b8488bb5bf0ccefc765, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doors:
-  - {fileID: 544852485}
-  LevelCompleteImage: {fileID: 401862927}
 --- !u!1 &416635576 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2312211394429289625, guid: 6d11008b77a2c50469187ebedd505402,
@@ -1101,10 +1062,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2013357673, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
-      propertyPath: m_Text
-      value: press Space to continue
-      objectReference: {fileID: 0}
+    - target: {fileID: 402081488, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
+      propertyPath: doors.Array.data[0]
+      value: 
+      objectReference: {fileID: 544852485}
     - target: {fileID: 3540447681490457539, guid: 15d700cbffea5294ca912b21988c6d6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1214,6 +1175,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InGameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540447681998288655, guid: 15d700cbffea5294ca912b21988c6d6e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540447682870158773, guid: 15d700cbffea5294ca912b21988c6d6e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}

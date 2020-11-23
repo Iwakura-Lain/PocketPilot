@@ -7,6 +7,11 @@ public class LevelsManager : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("rooms");
+    }    
+    
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("tutorial");
     }
 
     public void Restart()

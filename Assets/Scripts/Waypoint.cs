@@ -18,7 +18,6 @@ public class Waypoint : MonoBehaviour
     public static bool isThereEnemiesAround;
     void Start()
     {
-        isThereEnemiesAround = true;
         img = GameObject.Find("marker").GetComponent<Image>();
         meter = GameObject.Find("meter").GetComponent<Text>();
         pressF = GameObject.Find("hold f").GetComponent<Text>();

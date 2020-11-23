@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using  DG.Tweening;
 public class Waypoint : MonoBehaviour
 {
+    public GameObject LevelComplete;
     public Image img;
     public Transform target;
     public Text meter;
@@ -89,6 +90,8 @@ public class Waypoint : MonoBehaviour
 
     void OnLand()
     {
+        LevelComplete.SetActive(true);
+
          if (OnFinishLanding != null)
              OnFinishLanding();
     }

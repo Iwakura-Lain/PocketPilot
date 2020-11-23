@@ -5,6 +5,7 @@
 
 using UnityEngine;
 using MFlight;
+using UnityEditor.VersionControl;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Plane : MonoBehaviour
@@ -57,13 +58,24 @@ public class Plane : MonoBehaviour
     public void Init()
     {
         Waypoint.OnFinishLanding += stopLanding;
+        LevelScreen.OnCompleteLevelAction += Setup;
         rigid = GetComponent<Rigidbody>();
-        rigid.mass = 200;
-        rigid.drag = 15;
-        rigid.angularDrag = 10;
+        Setup(0);
 
         if (controller == null)
             Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
+    }
+
+    private void Setup(int signature) //can be used later to change plane parameters according to level number
+    {
+        landing = OnLanding = false;
+        rigid.mass = 200;
+        rigid.drag = 15;
+        rigid.angularDrag = 10;
+        rigid.useGravity = false;
+        GetComponent<SphereCollider>().enabled = true;
+        rigid.isKinematic = false;
+        thrust = 2000;
     }
 
     private void Update()
@@ -101,13 +113,6 @@ public class Plane : MonoBehaviour
 
         if(landing)
             StartLanding();
-        // else
-        // {
-        //     GetComponent<SphereCollider>().enabled = true;
-        //     if (rigid.mass > 200)
-        //         rigid.mass = 200;
-        //     rigid.useGravity = false;
-        // }
     }
 
     private void RunAutopilot(Vector3 flyTarget, out float yaw, out float pitch, out float roll)

@@ -24,6 +24,8 @@
             </e>
           </e>
         </e>
+        <e p="LevelCompleter.cs" t="Include" />
+        <e p="LevelScreen.cs" t="Include" />
         <e p="MouseFlight" t="Include">
           <e p="Scripts" t="Include">
             <e p="MouseFlightController.cs" t="Include" />

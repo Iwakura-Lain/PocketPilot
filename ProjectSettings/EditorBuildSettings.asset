@@ -5,19 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 98d2bc65ef167724b938e56700efe364
-  - enabled: 0
-    path: Assets/Scenes/s1.unity
-    guid: 55357f48a3e2b4643b0983826b854f64
-  - enabled: 0
-    path: Assets/Scenes/s2.unity
-    guid: 161cded5d77c5184f8243e35a2210c72
-  - enabled: 0
-    path: Assets/Scenes/First_try.unity
-    guid: 4e459d56b1706264ca547f66a28b40f5
   - enabled: 1
-    path: Assets/Office Room Furniture/Demo/Demo Scene.unity
-    guid: 4e4aa0a37831112448093cef958c7779
+    path: Assets/Scenes/rooms.unity
+    guid: e9ff66113cf6c4b41964ca1f484120a1
   m_configObjects: {}

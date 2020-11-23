@@ -4,14 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
-    public void MountainButton()
+    public void Play()
     {
-        SceneManager.LoadScene("s2");
-    }
-
-    public void CityButton()
-    {
-        SceneManager.LoadScene("s1");
+        SceneManager.LoadScene("rooms");
     }
 
     public void Restart()

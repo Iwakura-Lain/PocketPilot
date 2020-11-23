@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using  DG.Tweening;
 public class Waypoint : MonoBehaviour
 {
-    public GameObject LevelComplete;
     public Image img;
     public Transform target;
     public Text meter;
@@ -73,11 +72,11 @@ public class Waypoint : MonoBehaviour
             else
             {
                 meter.color = img.color = Color.green; 
-                pressF.text = "hold F tp land";
+                pressF.text = "hold F to land";
                 Plane.OnLanding = pressF.enabled = true;
                 if (Input.GetKey(KeyCode.F))
                 {
-                    progressBar.DOFillAmount(1, 2).OnComplete(() => { OnLand(); });
+                    progressBar.DOFillAmount(1, 1).OnComplete(() => { OnLand(); });
                 }
             }
         }
@@ -90,9 +89,8 @@ public class Waypoint : MonoBehaviour
 
     void OnLand()
     {
-        LevelComplete.SetActive(true);
-
-         if (OnFinishLanding != null)
+        progressBar.fillAmount = 0;
+        if (OnFinishLanding != null)
              OnFinishLanding();
     }
 }

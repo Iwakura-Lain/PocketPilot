@@ -7,6 +7,8 @@ public class TutorialEnd : MonoBehaviour
     public GameObject endMenu;
     private void OnCollisionEnter(Collision collision)
     {
+        Cursor.lockState = CursorLockMode.None;
+
         if (collision.gameObject.tag == "Player")
             endMenu.SetActive(true);
     }

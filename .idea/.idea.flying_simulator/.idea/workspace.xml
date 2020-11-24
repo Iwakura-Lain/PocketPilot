@@ -11,38 +11,41 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/TutorialEnd.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LevelScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Unity/2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Main Cell.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/C1D43C5B-941C-402C-A667-624CBCB47FFA/c2/a86e95c0/0200003Dpdb.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Landing.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Main Cell.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Tutorial.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/C1D43C5B-941C-402C-A667-624CBCB47FFA/c2/a86e95c0/0200003Dpdb.il" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/MouseFlightController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/DustEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/Toon.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
         <option value="$PROJECT_DIR$/Assets/LevelScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
-        <option value="$PROJECT_DIR$/Assets/LevelCompleter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/TutorialEnd.cs" />
         <option value="$PROJECT_DIR$/Assets/Tutorial.cs" />
+        <option value="$PROJECT_DIR$/Assets/LevelCompleter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TutorialEnd.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
       </list>
     </option>
   </component>
@@ -52,13 +55,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34955314" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29990068" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34931508" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29965752" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../GD/FlyAway/PitchProj/Build/tempBuild/FlyAway.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -67,10 +70,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18176">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="18176" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -97,78 +100,78 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="224" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1366.728@0.0.1366.728" timestamp="1604780656772" />
-    <state width="1038" height="29" key="GridCell.Tab.0.bottom" timestamp="1606166872008">
+    <state width="1199" height="29" key="GridCell.Tab.0.bottom" timestamp="1606219461895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606166872008" />
-    <state width="1038" height="29" key="GridCell.Tab.0.center" timestamp="1606166872008">
+    <state width="1199" height="29" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606219461895" />
+    <state width="1199" height="29" key="GridCell.Tab.0.center" timestamp="1606219461895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606166872008" />
-    <state width="1038" height="29" key="GridCell.Tab.0.left" timestamp="1606166872008">
+    <state width="1199" height="29" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606219461895" />
+    <state width="1199" height="29" key="GridCell.Tab.0.left" timestamp="1606219461895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606166872008" />
-    <state width="1038" height="29" key="GridCell.Tab.0.right" timestamp="1606166872008">
+    <state width="1199" height="29" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606219461895" />
+    <state width="1199" height="29" key="GridCell.Tab.0.right" timestamp="1606219461895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606166872008" />
-    <state width="1038" height="29" key="GridCell.Tab.1.bottom" timestamp="1606166878057">
+    <state width="1199" height="29" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606219461895" />
+    <state width="1199" height="29" key="GridCell.Tab.1.bottom" timestamp="1606219478271">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606166878057" />
-    <state width="1038" height="29" key="GridCell.Tab.1.center" timestamp="1606166878057">
+    <state width="1199" height="29" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606219478271" />
+    <state width="1199" height="29" key="GridCell.Tab.1.center" timestamp="1606219478270">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606166878057" />
-    <state width="1038" height="29" key="GridCell.Tab.1.left" timestamp="1606166878057">
+    <state width="1199" height="29" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606219478270" />
+    <state width="1199" height="29" key="GridCell.Tab.1.left" timestamp="1606219478270">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606166878057" />
-    <state width="1038" height="29" key="GridCell.Tab.1.right" timestamp="1606166878057">
+    <state width="1199" height="29" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606219478270" />
+    <state width="1199" height="29" key="GridCell.Tab.1.right" timestamp="1606219478271">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606166878057" />
-    <state width="1038" height="29" key="GridCell.Tab.2.bottom" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606219478271" />
+    <state width="1199" height="29" key="GridCell.Tab.2.bottom" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
-    <state width="1038" height="29" key="GridCell.Tab.2.center" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
+    <state width="1199" height="29" key="GridCell.Tab.2.center" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
-    <state width="1038" height="29" key="GridCell.Tab.2.left" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
+    <state width="1199" height="29" key="GridCell.Tab.2.left" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
-    <state width="1038" height="29" key="GridCell.Tab.2.right" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
+    <state width="1199" height="29" key="GridCell.Tab.2.right" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
-    <state width="1038" height="29" key="GridCell.Tab.3.bottom" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
+    <state width="1199" height="29" key="GridCell.Tab.3.bottom" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
-    <state width="1038" height="29" key="GridCell.Tab.3.center" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
+    <state width="1199" height="29" key="GridCell.Tab.3.center" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
-    <state width="1038" height="29" key="GridCell.Tab.3.left" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
+    <state width="1199" height="29" key="GridCell.Tab.3.left" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
-    <state width="1038" height="29" key="GridCell.Tab.3.right" timestamp="1606166871795">
+    <state width="1199" height="29" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
+    <state width="1199" height="29" key="GridCell.Tab.3.right" timestamp="1606219461622">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1038" height="29" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1606166871795" />
+    <state width="1199" height="29" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1606219461622" />
     <state x="168" y="18" key="SettingsEditor" timestamp="1605960128388">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="168" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605960128388" />
-    <state x="492" y="0" width="630" height="728" key="find.popup" timestamp="1605719686012">
+    <state x="492" y="0" width="678" height="728" key="find.popup" timestamp="1606219038406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="0" width="630" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605719686012" />
+    <state x="492" y="0" width="678" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1606219038406" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,17 +190,17 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/LevelCompleter.cs</url>
-          <line>15</line>
-          <properties documentPath="C:\Users\mmode\Documents\repositories\flying_simulator\Assets\LevelCompleter.cs" initialLine="15">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Users\mmode\Documents\repositories\flying_simulator\Assets\Scripts\LevelCompleter.cs" initialLine="28">
             <startOffsets>
-              <option value="329" />
+              <option value="755" />
             </startOffsets>
             <endOffsets>
-              <option value="365" />
+              <option value="783" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

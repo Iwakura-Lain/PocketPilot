@@ -13,15 +13,26 @@ public class Waypoint : MonoBehaviour
     public Image progressBar;
     
     public delegate void LandedAction();
-    public static event LandedAction OnFinishLanding;
+    public  event LandedAction OnFinishLanding;
+    public delegate void StartLanding();
+    public event StartLanding OnStartLanding;
+    public Plane plane;
 
     public static bool isThereEnemiesAround;
+    private  bool F_pressed;
     void Start()
     {
+        plane = FindObjectOfType<Plane>();
+        LevelCompleter.NewTargetAction += UpdateTarget;
         img = GameObject.Find("marker").GetComponent<Image>();
         meter = GameObject.Find("meter").GetComponent<Text>();
         pressF = GameObject.Find("hold f").GetComponent<Text>();
         progressBar = GameObject.Find("progress").GetComponent<Image>();
+    }
+
+    private void UpdateTarget(Transform newTarget)
+    {
+        target = newTarget;
     }
     private void Update()
     {
@@ -60,7 +71,7 @@ public class Waypoint : MonoBehaviour
         img.transform.position = pos;
         
         meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
-        if ((int) Vector3.Distance(target.position, transform.position) < 3)
+        if ((int) Vector3.Distance(target.position, transform.position) < 5)
         {
             if (isThereEnemiesAround)
             {
@@ -68,28 +79,38 @@ public class Waypoint : MonoBehaviour
                 pressF.enabled = true;
                 pressF.text = "you can not land if there are enemies around";
             }
-            else
+            else 
             {
                 meter.color = img.color = Color.green; 
                 pressF.text = "hold F to land";
-                Plane.OnLanding = pressF.enabled = true;
-                if (Input.GetKey(KeyCode.F))
+                plane.OnLanding = pressF.enabled = true;
+                if (Input.GetKeyDown(KeyCode.F))
                 {
-                    progressBar.DOFillAmount(1, 1).OnComplete(() => { OnLand(); });
+                    OnLand();
                 }
             }
         }
-        else
+        else 
         {
             meter.color = img.color =  Color.white;
-            Plane.OnLanding = pressF.enabled = false;
+            plane.OnLanding = pressF.enabled = false;
         }
+        
     }
 
     void OnLand()
     {
-        progressBar.fillAmount = 0;
-        if (OnFinishLanding != null)
-             OnFinishLanding();
+         if (OnStartLanding != null)
+             OnStartLanding();
+        plane.StartLanding();
+        
+        progressBar.DOFillAmount(1, 1).OnComplete(() =>
+        {
+            progressBar.fillAmount = 0;
+             if (OnFinishLanding != null)
+                  OnFinishLanding();
+            plane.stopLanding();
+        });
+
     }
 }

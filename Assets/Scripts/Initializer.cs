@@ -12,10 +12,11 @@ public class Initializer : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         statistics.Init();
 
         foreach (var chaser in chasers) chaser.Init();
-        _plane.Init();
+        //_plane.Init();
         mouseFlightController.Init();
     }
 }

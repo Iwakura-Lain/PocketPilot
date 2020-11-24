@@ -17,8 +17,6 @@ public class Tutorial : MonoBehaviour
     private int currentStep = 0;
     void Start()
     {
-        LevelScreen.OnCompleteLevelAction += Door;
-
         Hints.Add(0, movementHint);
         Hints.Add(1, waypointHint);
         Hints.Add(2, enemiesHint);
@@ -36,6 +34,8 @@ public class Tutorial : MonoBehaviour
 
     void Pause()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         anyButtonHint.SetActive(true);
         if(currentHint != Hints[2])
             currentStep++;
@@ -44,6 +44,8 @@ public class Tutorial : MonoBehaviour
     
     void Resume()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         if(currentHint != Hints[2])
             StartCoroutine(NextStep(currentStep));
 
@@ -75,7 +77,7 @@ public class Tutorial : MonoBehaviour
         Pause();
     }
 
-    void Door(int signature)
+    public void Door(int signature)
     {
         DoorHint.SetActive(true);
         currentHint = DoorHint;

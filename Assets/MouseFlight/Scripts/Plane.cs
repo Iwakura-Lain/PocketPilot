@@ -3,9 +3,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for details.
 //
 
+using System;
 using UnityEngine;
 using MFlight;
-using UnityEditor.VersionControl;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Plane : MonoBehaviour
@@ -48,25 +48,23 @@ public class Plane : MonoBehaviour
     }
 
     private bool landing;
-    public static bool OnLanding;
+    public  bool OnLanding;
 
     private Rigidbody rigid;
 
     private bool rollOverride = false;
     private bool pitchOverride = false;
 
-    public void Init()
+    void Start()
     {
-        Waypoint.OnFinishLanding += stopLanding;
-        LevelScreen.OnCompleteLevelAction += Setup;
+        //Waypoint.OnStartLanding += StartLanding;
         rigid = GetComponent<Rigidbody>();
-        Setup(0);
 
         if (controller == null)
             Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
     }
 
-    private void Setup(int signature) //can be used later to change plane parameters according to level number
+    public void Setup(int signature) //can be used later to change plane parameters according to level number
     {
         landing = OnLanding = false;
         rigid.mass = 200;
@@ -104,15 +102,6 @@ public class Plane : MonoBehaviour
         yaw = autoYaw;
         pitch = pitchOverride ? keyboardPitch : autoPitch;
         roll = rollOverride ? keyboardRoll : autoRoll;
-
-        if (OnLanding)
-        {
-            if (Input.GetKey(KeyCode.F))
-                landing = true;
-        }
-
-        if(landing)
-            StartLanding();
     }
 
     private void RunAutopilot(Vector3 flyTarget, out float yaw, out float pitch, out float roll)
@@ -173,15 +162,43 @@ public class Plane : MonoBehaviour
 
     public void StartLanding()
     {
+        // Waypoint.OnFinishLanding += stopLanding;
+       // Waypoint.OnStartLanding -= StartLanding;
+
         rigid.mass = rigid.mass + 15;
         rigid.useGravity = true;
+
         GetComponent<SphereCollider>().enabled = false;
     }
 
-    void stopLanding()
+    public void stopLanding()
     {
+       // Waypoint.OnFinishLanding -= stopLanding;
+
         print("stop");
         rigid.isKinematic = true;
         thrust = 0;
+    }
+    
+    public delegate void DestroyedAction();
+
+    public GameObject ExplosionPrefab;
+    public GameObject AfterlifeUI;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Enemy")
+            BlowMe();
+    }
+
+    public static event DestroyedAction OnDestroyed;
+
+    private void BlowMe()
+    {
+        Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
+        AfterlifeUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        OnDestroyed?.Invoke();
+        gameObject.SetActive(false);
     }
 }

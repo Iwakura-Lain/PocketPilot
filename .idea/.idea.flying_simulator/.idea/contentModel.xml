@@ -24,8 +24,6 @@
             </e>
           </e>
         </e>
-        <e p="LevelCompleter.cs" t="Include" />
-        <e p="LevelScreen.cs" t="Include" />
         <e p="MouseFlight" t="Include">
           <e p="Scripts" t="Include">
             <e p="MouseFlightController.cs" t="Include" />
@@ -61,14 +59,18 @@
         <e p="Scripts" t="Include">
           <e p="Chaser.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
+          <e p="EnterNewRoom.cs" t="Include" />
           <e p="Initializer.cs" t="Include" />
           <e p="KillMe.cs" t="Include" />
           <e p="Landing.cs" t="Include" />
+          <e p="LevelCompleter.cs" t="Include" />
+          <e p="LevelScreen.cs" t="Include" />
           <e p="LevelsManager.cs" t="Include" />
-          <e p="PlaneBehaviour.cs" t="Include" />
           <e p="PlaneMovement.cs" t="Include" />
           <e p="StartCountdown.cs" t="Include" />
           <e p="Statistics.cs" t="Include" />
+          <e p="Tutorial.cs" t="Include" />
+          <e p="TutorialEnd.cs" t="Include" />
           <e p="Waypoint.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
@@ -106,8 +108,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="Tutorial.cs" t="Include" />
-        <e p="TutorialEnd.cs" t="Include" />
       </e>
       <e p="flying_simulator.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

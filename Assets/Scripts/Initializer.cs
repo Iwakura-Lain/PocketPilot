@@ -12,6 +12,8 @@ public class Initializer : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+
         Cursor.lockState = CursorLockMode.Locked;
         statistics.Init();
 

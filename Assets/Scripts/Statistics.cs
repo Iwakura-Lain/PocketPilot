@@ -10,6 +10,7 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
 
     private void Reset()
     {
+        text.text = "";
         totalCount = 0;
         currentDestroyedCount = 0;
     }

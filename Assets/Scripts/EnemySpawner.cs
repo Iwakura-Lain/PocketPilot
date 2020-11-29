@@ -2,28 +2,21 @@
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject Enemy;
-    private float currentDestroyedCount;
-    private float totalCount;
-
-    private void Start()
+    public GameObject enemyPrefab;
+    public GameObject plane;
+    public Transform[] SpawnPositions;
+    void Start()
     {
-        Chaser.OnDestroyed += UpdateStatistics;
-        Chaser.OnInit += AddToTotalCount;
+        Messenger.AddListener("CargoTaken", Spawn);
+        plane = GameObject.FindGameObjectWithTag("Player");
     }
-
-    private void AddToTotalCount()
-    {
-        totalCount++;
-    }
-
-    private void UpdateStatistics()
-    {
-        currentDestroyedCount++;
-    }
-
     private void Spawn()
     {
-        if (totalCount < currentDestroyedCount) Instantiate(Enemy, transform.position, Quaternion.identity);
+        foreach (var spawnPosition in SpawnPositions)
+        {
+            GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition.position, plane.transform.rotation);
+            newEnemy.GetComponent<Chaser>().Init();
+        }
+
     }
 }

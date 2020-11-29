@@ -5,8 +5,6 @@ using UnityEngine;
 public class LevelScreen : MonoBehaviour
 {
     private int levelNumber = -1;
-    public delegate void OnCompleteLevel(int level);
-    public event OnCompleteLevel OnCompleteLevelAction;
 
     public LevelCompleter levelCompleter;
     public Plane plane;
@@ -17,16 +15,13 @@ public class LevelScreen : MonoBehaviour
         {
             levelNumber++;
 
-            plane.Setup(levelNumber);
+           // plane.Setup(levelNumber);
             levelCompleter.OpenDoor(levelNumber);
             if (tutorial)
             {
                 tutorial.Door(levelNumber);
             }
-            
-            if (OnCompleteLevelAction != null)
-                OnCompleteLevelAction(levelNumber);
-            
+            Messenger.Broadcast("OnCompleteLevelAction", levelNumber);
             gameObject.SetActive(false);
         }
 

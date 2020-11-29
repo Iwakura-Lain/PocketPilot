@@ -17,10 +17,8 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
 
     public void Init()
     {
-        var waypoint = GameObject.FindObjectOfType<Waypoint>();
-
         PlaneMovement.OnDestroyed += YouHaveBeenCatched;
-        waypoint.OnFinishLanding += Reset;
+        Messenger.AddListener("StopLanding", Reset);
         Chaser.OnInit += AddToTotalCount;
         text = GetComponent<Text>();
         Chaser.OnDestroyed += UpdateStatistics;
@@ -42,9 +40,12 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
         if (totalCount > 0)
         {
             Waypoint.isThereEnemiesAround = true;
-            
-            if(currentDestroyedCount == totalCount)
+
+            if (currentDestroyedCount == totalCount)
+            {
                 Waypoint.isThereEnemiesAround = false;
+                Messenger.Broadcast("EnemiesAreDestroyed");
+            }
         }
     }
 

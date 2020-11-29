@@ -16,7 +16,6 @@ public class LevelsManager : MonoBehaviour
 
     public void Restart()
     {
-        print("click");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

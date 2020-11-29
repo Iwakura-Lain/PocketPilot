@@ -5,16 +5,12 @@ public class LevelCompleter : MonoBehaviour
     public Animator[] doors;
     public Transform[] waypointNew;
     public GameObject LevelCompleteImage;
-    
-    public delegate void NewTarget(Transform t);
-    public static event NewTarget NewTargetAction;
 
     public GameObject EndOfDemoScreen;
     private void Start()
     {
-        var waypoint = FindObjectOfType<Waypoint>();
-        var LevelScreen = Resources.FindObjectsOfTypeAll<LevelScreen>();
-        waypoint.OnFinishLanding += LevelFinished;
+        Messenger.AddListener("StopLanding", LevelFinished);
+        Messenger.AddListener<int>("OnCompleteLevelAction", OpenDoor);
     }
 
     public void OpenDoor(int level)
@@ -27,8 +23,8 @@ public class LevelCompleter : MonoBehaviour
         else
         {
             doors[level].enabled = true;
-            if (NewTargetAction != null)
-                NewTargetAction(waypointNew[level]);
+            
+            Messenger.Broadcast("NewTarget", waypointNew[level]);
         }
     }
 

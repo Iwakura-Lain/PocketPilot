@@ -1,21 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using  DG.Tweening;
+using UnityEngine.Serialization;
+
 public class Waypoint : MonoBehaviour
 {
     public Image img;
     public Transform target;
+    public Transform deliveryPoint;
     public Text meter;
     // To adjust the position of the icon
     public Vector3 offset;
     
-    public Text pressF;
+    public Text AboveText;
     public Image progressBar;
-    
-    public delegate void LandedAction();
-    public  event LandedAction OnFinishLanding;
-    public delegate void StartLanding();
-    public event StartLanding OnStartLanding;
+    public GameObject cargo;
     public Plane plane;
 
     public static bool isThereEnemiesAround;
@@ -23,10 +22,10 @@ public class Waypoint : MonoBehaviour
     void Start()
     {
         plane = FindObjectOfType<Plane>();
-        LevelCompleter.NewTargetAction += UpdateTarget;
+        Messenger.AddListener<Transform>("NewTarget", UpdateTarget);
         img = GameObject.Find("marker").GetComponent<Image>();
         meter = GameObject.Find("meter").GetComponent<Text>();
-        pressF = GameObject.Find("hold f").GetComponent<Text>();
+        AboveText = GameObject.Find("hold f").GetComponent<Text>();
         progressBar = GameObject.Find("progress").GetComponent<Image>();
     }
 
@@ -73,44 +72,52 @@ public class Waypoint : MonoBehaviour
         meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
         if ((int) Vector3.Distance(target.position, transform.position) < 5)
         {
-            if (isThereEnemiesAround)
-            {
-                meter.color = img.color = Color.red;
-                pressF.enabled = true;
-                pressF.text = "you can not land if there are enemies around";
-            }
-            else 
-            {
+            // if (isThereEnemiesAround)
+            // {
+            //     meter.color = img.color = Color.red;
+            //     AboveText.enabled = true;
+            //     AboveText.text = "you can not land if there are enemies around";
+            // }
+            // else 
+            //{
                 meter.color = img.color = Color.green; 
-                pressF.text = "hold F to land";
-                plane.OnLanding = pressF.enabled = true;
+                plane.OnLanding = AboveText.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     OnLand();
                 }
-            }
+           // }
         }
         else 
         {
             meter.color = img.color =  Color.white;
-            plane.OnLanding = pressF.enabled = false;
+            plane.OnLanding = AboveText.enabled = false;
         }
         
     }
 
     void OnLand()
     {
-         if (OnStartLanding != null)
-             OnStartLanding();
-        plane.StartLanding();
-        
-        progressBar.DOFillAmount(1, 1).OnComplete(() =>
+        if (!cargo)
         {
-            progressBar.fillAmount = 0;
-             if (OnFinishLanding != null)
-                  OnFinishLanding();
-            plane.stopLanding();
-        });
+            Messenger.Broadcast("StartLanding");
+            progressBar.DOFillAmount(1, 1).OnComplete(() =>
+            {
+                progressBar.fillAmount = 0;
+                Messenger.Broadcast("StopLanding");
+
+            });
+        }
+        else
+        {
+            progressBar.DOFillAmount(1, 1).OnComplete(() =>
+            {
+                progressBar.fillAmount = 0;
+                UpdateTarget(deliveryPoint);
+                Destroy(cargo);
+                Messenger.Broadcast("CargoTaken");
+            });
+        }
 
     }
 }

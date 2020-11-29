@@ -57,14 +57,16 @@ public class Plane : MonoBehaviour
 
     void Start()
     {
-        //Waypoint.OnStartLanding += StartLanding;
+        Messenger.AddListener("StartLanding", StartLanding);
+        Messenger.AddListener("StopLanding", stopLanding);
+        Messenger.AddListener("CargoTaken", Setup);
         rigid = GetComponent<Rigidbody>();
 
         if (controller == null)
             Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
     }
 
-    public void Setup(int signature) //can be used later to change plane parameters according to level number
+    public void Setup() //can be used later to change plane parameters according to level number
     {
         landing = OnLanding = false;
         rigid.mass = 200;
@@ -162,9 +164,6 @@ public class Plane : MonoBehaviour
 
     public void StartLanding()
     {
-        // Waypoint.OnFinishLanding += stopLanding;
-       // Waypoint.OnStartLanding -= StartLanding;
-
         rigid.mass = rigid.mass + 15;
         rigid.useGravity = true;
 
@@ -173,8 +172,6 @@ public class Plane : MonoBehaviour
 
     public void stopLanding()
     {
-       // Waypoint.OnFinishLanding -= stopLanding;
-
         print("stop");
         rigid.isKinematic = true;
         thrust = 0;
@@ -195,6 +192,8 @@ public class Plane : MonoBehaviour
 
     private void BlowMe()
     {
+        Messenger.RemoveListener("StartLanding", StartLanding);
+        Messenger.RemoveListener("StopLanding", stopLanding);
         Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         AfterlifeUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;

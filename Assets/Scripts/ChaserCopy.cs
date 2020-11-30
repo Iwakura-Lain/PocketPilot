@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Chaser : MonoBehaviour
+public class ChaserCopy : MonoBehaviour
 {
     public delegate void DestroyedAction();
 
@@ -44,9 +44,6 @@ public class Chaser : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Obsticle") //TODO XD
-            BlowMe();
-
-        if (collision.gameObject.tag == "Colapse" || collision.gameObject.tag == "Colapse") //TODO XD
             BlowMe();
 
         if (collision.gameObject.tag == "Player")

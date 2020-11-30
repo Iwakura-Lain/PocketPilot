@@ -17,7 +17,7 @@ public class Initializer : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         statistics.Init();
 
-        foreach (var chaser in chasers) chaser.Init();
+        //foreach (var chaser in chasers) chaser.Init();
         //_plane.Init();
         mouseFlightController.Init();
     }

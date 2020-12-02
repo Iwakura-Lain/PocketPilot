@@ -30,6 +30,9 @@ public class WaypointActivator : MonoBehaviour
     private void OnTriggerEnter(Collider other) //for doors
     {
         if (other.gameObject.tag == "Player")
+        {
+            GetComponent<BoxCollider>().enabled = false;
             EnableWaypoint();
+        }
     }
 }

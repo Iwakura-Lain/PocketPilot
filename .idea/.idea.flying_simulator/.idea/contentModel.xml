@@ -59,6 +59,7 @@
         <e p="Scripts" t="Include">
           <e p="Callback.cs" t="Include" />
           <e p="Chaser.cs" t="Include" />
+          <e p="ChaserCopy.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="EnterNewRoom.cs" t="Include" />
           <e p="Initializer.cs" t="Include" />

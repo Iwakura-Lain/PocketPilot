@@ -86,13 +86,20 @@ public class Plane : MonoBehaviour
         var keyboardRoll = Input.GetAxis("Horizontal")  * 0.1f;
         if (Mathf.Abs(keyboardRoll) > 0) rollOverride = true;
 
-        var keyboardPitch = Input.GetAxis("Vertical") * 0.1f;
-        if (Mathf.Abs(keyboardPitch) > 0)
+        // var keyboardPitch = Input.GetAxis("Vertical") * 0.1f;
+        // if (Mathf.Abs(keyboardPitch) > 0)
+        // {
+        //     pitchOverride = true;
+        //     rollOverride = true;
+        // }
+        if (Input.GetKey(KeyCode.W))
         {
-            pitchOverride = true;
-            rollOverride = true;
+            thrust = 4000;
         }
-
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            thrust = 2000;
+        }
         // Calculate the autopilot stick inputs.
         var autoYaw = 0f;
         var autoPitch = 0f;
@@ -102,7 +109,8 @@ public class Plane : MonoBehaviour
 
         // Use either keyboard or autopilot input.
         yaw = autoYaw;
-        pitch = pitchOverride ? keyboardPitch : autoPitch;
+        pitch = autoPitch;
+       // pitch = pitchOverride ? keyboardPitch : autoPitch;
         roll = rollOverride ? keyboardRoll : autoRoll;
     }
 

@@ -43,10 +43,7 @@ public class Chaser : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Obsticle") //TODO XD
-            BlowMe();
-
-        if (collision.gameObject.tag == "Colapse" || collision.gameObject.tag == "Colapse") //TODO XD
+        if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Colapse") 
             BlowMe();
 
         if (collision.gameObject.tag == "Player")

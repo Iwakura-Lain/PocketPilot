@@ -13,15 +13,17 @@ public class Plane : MonoBehaviour
     [Header("Components")] [SerializeField]
     private MouseFlightController controller = null;
 
-    [Header("Physics")] [Tooltip("Force to push plane forwards with")]
-    private float thrust = 2000;
+    [Header("Speeds")] private float thrust;
+    public float thrustNormal = 4000;
+    public float thrustSpeedUp = 8000;
+    public float thrustSlowDown = 2000;
 
     [Tooltip("Pitch, Yaw, Roll")] public Vector3 turnTorque = new Vector3(90f, 25f, 45f);
     [Tooltip("Multiplier for all forces")] private float forceMult = 10f;
 
-    private float sensitivity = 0.25f;
+    public float sensitivity = 0.25f;
     [Tooltip("Angle at which airplane banks fully into target.")]
-    private float aggressiveTurnAngle = 10f;
+    public float aggressiveTurnAngle = 10f;
 
     [Header("Input")] [SerializeField] [Range(-1f, 1f)]
     private float pitch = 0f;
@@ -57,10 +59,11 @@ public class Plane : MonoBehaviour
 
     void Start()
     {
+        rigid = GetComponent<Rigidbody>();
+        Setup();
         Messenger.AddListener("StartLanding", StartLanding);
         Messenger.AddListener("StopLanding", stopLanding);
         Messenger.AddListener("CargoTaken", Setup);
-        rigid = GetComponent<Rigidbody>();
 
         if (controller == null)
             Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
@@ -75,7 +78,7 @@ public class Plane : MonoBehaviour
         rigid.useGravity = false;
         GetComponent<SphereCollider>().enabled = true;
         rigid.isKinematic = false;
-        thrust = 2000;
+        thrust = thrustNormal;
     }
 
     private void Update()
@@ -94,11 +97,15 @@ public class Plane : MonoBehaviour
         // }
         if (Input.GetKey(KeyCode.W))
         {
-            thrust = 4000;
+            thrust = thrustSpeedUp;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            thrust = thrustSlowDown;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
-            thrust = 2000;
+            thrust = thrustNormal;
         }
         // Calculate the autopilot stick inputs.
         var autoYaw = 0f;

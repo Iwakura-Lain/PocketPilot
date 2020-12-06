@@ -8,7 +8,6 @@ public class Initializer : MonoBehaviour
     [SerializeField] private MouseFlightController mouseFlightController;
     [SerializeField] private Statistics statistics;
     [SerializeField] private Chaser[] chasers;
-    [SerializeField] private Plane _plane;
 
     private void Start()
     {

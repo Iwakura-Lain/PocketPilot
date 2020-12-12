@@ -508,5 +508,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jet: {fileID: 7176795986060549085}
-  player: {fileID: 4512676931084133777, guid: 541a674670b6e784894d5c981ba3227d, type: 3}
+  player: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}

@@ -7,17 +7,14 @@ public class Initializer : MonoBehaviour
 {
     [SerializeField] private MouseFlightController mouseFlightController;
     [SerializeField] private Statistics statistics;
-    [SerializeField] private Chaser[] chasers;
 
     private void Start()
     {
         Time.timeScale = 1;
-
+        mouseFlightController = GameObject.FindObjectOfType<MouseFlightController>();
         Cursor.lockState = CursorLockMode.Locked;
         statistics.Init();
 
-        //foreach (var chaser in chasers) chaser.Init();
-        //_plane.Init();
         mouseFlightController.Init();
     }
 }

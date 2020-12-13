@@ -474,11 +474,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8442214978114621382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb22feeafde3ca744b25487492c90102, type: 3}
+  m_Script: {fileID: 11500000, guid: 392315f09ac92264e8ad2d543f7a629d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jet: {fileID: 8821023121630668967}
-  player: {fileID: 0}
+  ObjectToDisplay: {fileID: 8821023121630668967}
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &9009808002051692832
 GameObject:

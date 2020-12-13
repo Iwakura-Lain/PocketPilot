@@ -57,6 +57,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ArowFollow.cs" t="Include" />
           <e p="Callback.cs" t="Include" />
           <e p="Chaser.cs" t="Include" />
           <e p="ChaserCopy.cs" t="Include" />
@@ -69,6 +70,7 @@
           <e p="LevelScreen.cs" t="Include" />
           <e p="LevelsManager.cs" t="Include" />
           <e p="Messenger.cs" t="Include" />
+          <e p="MinimapCamera.cs" t="Include" />
           <e p="PlaneMovement.cs" t="Include" />
           <e p="StartCountdown.cs" t="Include" />
           <e p="Statistics.cs" t="Include" />

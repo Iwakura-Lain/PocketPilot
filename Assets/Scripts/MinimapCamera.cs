@@ -7,6 +7,11 @@ public class MinimapCamera : MonoBehaviour
 {
     public Transform player; //camera following position (Transform) of player (player linked to actual player)
     public Vector3 offset; //Vector3 stores 3 float numbers
+
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+    }
     void Update()
     {   //position of camera equal to position of player
         transform.position = player.position + offset;

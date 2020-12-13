@@ -51,8 +51,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ArrowFollow2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MinimapCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ArowFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
       </list>
     </option>
   </component>
@@ -78,10 +81,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12732">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="12732" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>

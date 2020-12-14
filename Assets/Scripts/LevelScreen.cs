@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelScreen : MonoBehaviour
 {
@@ -13,16 +14,18 @@ public class LevelScreen : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            levelNumber++;
-
-           // plane.Setup(levelNumber);
-            levelCompleter.OpenDoor(levelNumber);
-            if (tutorial)
-            {
-                tutorial.Door(levelNumber);
-            }
-            Messenger.Broadcast("OnCompleteLevelAction", levelNumber);
-            gameObject.SetActive(false);
+            SceneManager.LoadScene("Menu");
+            Cursor.lockState = CursorLockMode.None;
+            //  levelNumber++;
+            //
+            // // plane.Setup(levelNumber);
+            //  levelCompleter.OpenDoor(levelNumber);
+            //  if (tutorial)
+            //  {
+            //      tutorial.Door(levelNumber);
+            //  }
+            //  Messenger.Broadcast("OnCompleteLevelAction", levelNumber);
+            //  gameObject.SetActive(false);
         }
 
 

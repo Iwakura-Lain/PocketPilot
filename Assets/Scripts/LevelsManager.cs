@@ -4,9 +4,22 @@ using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
+    public GameObject levelChoice;
     public void Play()
     {
+        levelChoice.SetActive(true);
+    }    
+    public void Rooms()
+    {
         SceneManager.LoadScene("rooms");
+    }    
+    public void Playground()
+    {
+        SceneManager.LoadScene("Playground");
+    }    
+    public void Physics()
+    {
+        SceneManager.LoadScene("LevelAleks");
     }    
     
     public void Tutorial()

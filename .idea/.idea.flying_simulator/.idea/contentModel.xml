@@ -114,6 +114,19 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="Trees_WorldSpace_FREE" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="HDRP" t="Include">
+              <e p="HDRP_BarkSwitch.shader" t="Include" />
+              <e p="HDRP_TreeLeafSwitcher.shader" t="Include" />
+            </e>
+            <e p="StandardRP" t="Include">
+              <e p="BarkShaderAS.shader" t="Include" />
+              <e p="TreeLeafSwitcherAS.shader" t="Include" />
+            </e>
+          </e>
+          <e p="WorldSpaceTrees_Doc.txt" t="Include" />
+        </e>
       </e>
       <e p="flying_simulator.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

@@ -44,7 +44,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs" />
         <option value="$PROJECT_DIR$/Assets/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
@@ -56,6 +55,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelsManager.cs" />
       </list>
     </option>
   </component>

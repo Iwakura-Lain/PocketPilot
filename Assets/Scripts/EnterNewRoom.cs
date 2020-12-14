@@ -14,7 +14,6 @@ public class EnterNewRoom : MonoBehaviour
             foreach (var spawnPosition in spawnPositions)
             {
                 GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition.position, spawnPosition.rotation);
-                newEnemy.GetComponent<Chaser>().Init();
             }
 
             CloseDoor.enabled = true;

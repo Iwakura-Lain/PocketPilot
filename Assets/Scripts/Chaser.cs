@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Chaser : MonoBehaviour
 {
-    public delegate void DestroyedAction();
-
-    public delegate void InitialAction();
-
     public GameObject ExplosionPrefab;
 
     private Transform player;
@@ -16,10 +12,9 @@ public class Chaser : MonoBehaviour
     private float thrust = 1950;
     private float forceMult = 10;
 
-    public void Init()
+    public void Start()
     {
-        if (OnInit != null)
-            OnInit();
+        Messenger.Broadcast("OnInitChaser");
         rigid = GetComponent<Rigidbody>();
         /*rigid.mass = 700;
         rigid.drag = 5;
@@ -49,15 +44,11 @@ public class Chaser : MonoBehaviour
         if (collision.gameObject.tag == "Player")
             Destroy(collision.gameObject);
     }
-
-    public static event DestroyedAction OnDestroyed;
-    public static event InitialAction OnInit; //sends to statistics for calculating total amount of enemies
-
+    
     private void BlowMe()
     {
         Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
-        if (OnDestroyed != null)
-            OnDestroyed();
+        Messenger.Broadcast("OnDestroyedChaser");
         Destroy(gameObject);
     }
 }

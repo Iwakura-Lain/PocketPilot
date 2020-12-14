@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -9,14 +10,17 @@ public class EnemySpawner : MonoBehaviour
     {
         Messenger.AddListener("CargoTaken", Spawn);
         plane = GameObject.FindGameObjectWithTag("Player");
+        if (SceneManager.GetActiveScene().name == "Playground")
+        {
+            Spawn();
+            Messenger.AddListener("EnemiesAreDestroyed", Spawn);
+        }
     }
     private void Spawn()
     {
         foreach (var spawnPosition in SpawnPositions)
         {
-            GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition.position, plane.transform.rotation);
-            newEnemy.GetComponent<Chaser>().Init();
+           Instantiate(enemyPrefab, spawnPosition.position, plane.transform.rotation);
         }
-
     }
 }

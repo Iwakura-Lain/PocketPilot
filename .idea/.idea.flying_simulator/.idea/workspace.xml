@@ -36,7 +36,6 @@
         <option value="$PROJECT_DIR$/Assets/TutorialEnd.cs" />
         <option value="$PROJECT_DIR$/Assets/Tutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/LevelCompleter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlaneBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialEnd.cs" />
@@ -45,17 +44,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs" />
         <option value="$PROJECT_DIR$/Assets/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowFollow2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinimapCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArowFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
       </list>
     </option>
   </component>

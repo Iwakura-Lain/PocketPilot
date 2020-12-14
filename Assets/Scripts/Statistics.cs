@@ -19,9 +19,9 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
     {
         PlaneMovement.OnDestroyed += YouHaveBeenCatched;
         Messenger.AddListener("StopLanding", Reset);
-        Chaser.OnInit += AddToTotalCount;
+        Messenger.AddListener("OnInitChaser", AddToTotalCount);
+        Messenger.AddListener("OnDestroyedChaser", UpdateStatistics);
         text = GetComponent<Text>();
-        Chaser.OnDestroyed += UpdateStatistics;
     }
 
     private void AddToTotalCount()

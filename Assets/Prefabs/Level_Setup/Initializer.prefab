@@ -46,8 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseFlightController: {fileID: 0}
   statistics: {fileID: 0}
-  chasers: []
-  _plane: {fileID: 0}
 --- !u!114 &375917225328686747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,10 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66189b6bd18640488954e9a578dc6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7553320803180659047, guid: ffd288e87a559094a826901d801751a7,
+  enemyPrefab: {fileID: 8151868713352426013, guid: fef5b07dd3d8e5f4281729785767d298,
     type: 3}
   plane: {fileID: 0}
   SpawnPositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5151992752115639696, guid: dd65ced8dfabe0d4dbc4ddd7d9a6e4ca, type: 3}
+  - {fileID: 5151992752115639696, guid: dd65ced8dfabe0d4dbc4ddd7d9a6e4ca, type: 3}
+  - {fileID: 5151992752115639696, guid: dd65ced8dfabe0d4dbc4ddd7d9a6e4ca, type: 3}

@@ -7,11 +7,14 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
     private int currentDestroyedCount;
     private Text text;
     private int totalCount;
+    public int totalRingCount;
+    private int currentRingCount;
 
     private void Reset()
     {
         text.text = "";
         totalCount = 0;
+        totalRingCount = 0;
         currentDestroyedCount = 0;
     }
 
@@ -20,6 +23,7 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
         PlaneMovement.OnDestroyed += YouHaveBeenCatched;
         Messenger.AddListener("StopLanding", Reset);
         Messenger.AddListener("OnInitChaser", AddToTotalCount);
+        Messenger.AddListener("OnEnterRing", UpdateRingCount);
         Messenger.AddListener("OnDestroyedChaser", UpdateStatistics);
         text = GetComponent<Text>();
     }
@@ -27,6 +31,13 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
     private void AddToTotalCount()
     {
         totalCount++;
+    }
+    private void UpdateRingCount()
+    {
+        currentRingCount++;
+        var s = "{0} of {1}";
+        if (text)
+            text.text = string.Format(s, currentRingCount, totalRingCount);
     }
 
     private void UpdateStatistics()

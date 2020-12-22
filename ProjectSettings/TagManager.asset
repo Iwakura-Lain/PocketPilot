@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Enemy
   - Colapse
+  - Ring
   layers:
   - Default
   - TransparentFX

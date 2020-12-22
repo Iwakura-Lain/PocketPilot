@@ -72,6 +72,7 @@
           <e p="Messenger.cs" t="Include" />
           <e p="MinimapCamera.cs" t="Include" />
           <e p="PlaneMovement.cs" t="Include" />
+          <e p="Ring.cs" t="Include" />
           <e p="StartCountdown.cs" t="Include" />
           <e p="Statistics.cs" t="Include" />
           <e p="Tutorial.cs" t="Include" />

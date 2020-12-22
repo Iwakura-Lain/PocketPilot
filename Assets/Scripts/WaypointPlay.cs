@@ -20,8 +20,8 @@ public class WaypointPlay : Waypoint
             target = targets[currentTarget];
         else
         {
-            
-            return;
+            currentTarget = 0;
+            target = targets[currentTarget];
         }
     }
     protected override void Update()

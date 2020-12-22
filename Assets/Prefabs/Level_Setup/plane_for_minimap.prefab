@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4588925858545721470}
   m_Layer: 0
-  m_Name: PlayerSetup
+  m_Name: plane_for_minimap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,6 +188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119252966138850112, guid: 541a674670b6e784894d5c981ba3227d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4512676931084133777, guid: 541a674670b6e784894d5c981ba3227d,
         type: 3}

@@ -19,7 +19,7 @@ public class Waypoint : MonoBehaviour
 
     public static bool isThereEnemiesAround;
     private  bool F_pressed;
-    void Start()
+   protected virtual void Start()
     {
         plane = FindObjectOfType<Plane>();
         Messenger.AddListener<Transform>("NewTarget", UpdateTarget);
@@ -33,7 +33,7 @@ public class Waypoint : MonoBehaviour
     {
         target = newTarget;
     }
-    private void Update()
+    protected virtual void Update()
     {
         // Giving limits to the icon so it sticks on the screen
         // Below calculations witht the assumption that the icon anchor point is in the middle
@@ -72,15 +72,7 @@ public class Waypoint : MonoBehaviour
         meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
         if ((int) Vector3.Distance(target.position, transform.position) < 5)
         {
-            // if (isThereEnemiesAround)
-            // {
-            //     meter.color = img.color = Color.red;
-            //     AboveText.enabled = true;
-            //     AboveText.text = "you can not land if there are enemies around";
-            // }
-            // else 
-            //{
-                meter.color = img.color = Color.green; 
+            meter.color = img.color = Color.green; 
                 plane.OnLanding = AboveText.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {

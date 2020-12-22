@@ -18,6 +18,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/Main Cell.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaypointPlay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/C1D43C5B-941C-402C-A667-624CBCB47FFA/c2/a86e95c0/0200003Dpdb.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Messenger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,7 +44,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Messenger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs" />
         <option value="$PROJECT_DIR$/Assets/WaypointActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowFollow2.cs" />
@@ -56,6 +56,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WaypointPlay.cs" />
       </list>
     </option>
   </component>
@@ -65,8 +67,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.47260273" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29965752" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.47291023" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.2995356" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="XThreadsFramesViewSplitterKey" value="0.37023592" />
@@ -81,10 +83,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="748">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="748" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -111,38 +113,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="224" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1366.728@0.0.1366.728" timestamp="1604780656772" />
-    <state width="1199" height="290" key="GridCell.Tab.0.bottom" timestamp="1607126481178">
+    <state width="1323" height="306" key="GridCell.Tab.0.bottom" timestamp="1608632256749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607126481178" />
-    <state width="1199" height="290" key="GridCell.Tab.0.center" timestamp="1607126481177">
+    <state width="1323" height="306" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608632256749" />
+    <state width="1323" height="306" key="GridCell.Tab.0.center" timestamp="1608632256749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607126481177" />
-    <state width="1199" height="290" key="GridCell.Tab.0.left" timestamp="1607126481177">
+    <state width="1323" height="306" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608632256749" />
+    <state width="1323" height="306" key="GridCell.Tab.0.left" timestamp="1608632256749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607126481177" />
-    <state width="1199" height="290" key="GridCell.Tab.0.right" timestamp="1607126481177">
+    <state width="1323" height="306" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608632256749" />
+    <state width="1323" height="306" key="GridCell.Tab.0.right" timestamp="1608632256749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607126481177" />
-    <state width="1199" height="290" key="GridCell.Tab.1.bottom" timestamp="1607126481178">
+    <state width="1323" height="306" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608632256749" />
+    <state width="1323" height="306" key="GridCell.Tab.1.bottom" timestamp="1608632275042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607126481178" />
-    <state width="1199" height="290" key="GridCell.Tab.1.center" timestamp="1607126481178">
+    <state width="1323" height="306" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608632275042" />
+    <state width="1323" height="306" key="GridCell.Tab.1.center" timestamp="1608632275042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607126481178" />
-    <state width="1199" height="290" key="GridCell.Tab.1.left" timestamp="1607126481178">
+    <state width="1323" height="306" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1608632275042" />
+    <state width="1323" height="306" key="GridCell.Tab.1.left" timestamp="1608632275041">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607126481178" />
-    <state width="1199" height="290" key="GridCell.Tab.1.right" timestamp="1607126481178">
+    <state width="1323" height="306" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1608632275041" />
+    <state width="1323" height="306" key="GridCell.Tab.1.right" timestamp="1608632275042">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1199" height="290" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607126481178" />
+    <state width="1323" height="306" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1608632275042" />
     <state width="1199" height="290" key="GridCell.Tab.2.bottom" timestamp="1607126481179">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -179,10 +181,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="168" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605960128388" />
-    <state x="492" y="0" width="678" height="728" key="find.popup" timestamp="1606867090009">
+    <state x="492" y="0" width="678" height="728" key="find.popup" timestamp="1608631213370">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="0" width="678" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1606867090009" />
+    <state x="492" y="0" width="678" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1608631213370" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

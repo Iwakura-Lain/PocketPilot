@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelAleks.unity
     guid: b19be167a30bac545b4899fd7821d5dd
+  - enabled: 1
+    path: Assets/Scenes/Exploration.unity
+    guid: d73fe442e847bc94daa159c96c65de9b
+  - enabled: 1
+    path: Assets/Scenes/Bouncing Balls.unity
+    guid: c1684d77cea3c2b47b79264a6d9a22c3
+  - enabled: 1
+    path: Assets/Scenes/FunRoom.unity
+    guid: 8cec0c61331caf144802f9c1471af79e
+  - enabled: 1
+    path: Assets/Scenes/Waypoints.unity
+    guid: ad8d75c77260bbd42a534c77acd147bb
   m_configObjects: {}

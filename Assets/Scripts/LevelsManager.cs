@@ -21,7 +21,22 @@ public class LevelsManager : MonoBehaviour
     {
         SceneManager.LoadScene("LevelAleks");
     }    
-    
+    public void Waypoints()
+    {
+        SceneManager.LoadScene("Waypoints");
+    }    
+    public void Bouncing()
+    {
+        SceneManager.LoadScene("Bouncing Balls");
+    }    
+    public void Exploration()
+    {
+        SceneManager.LoadScene("Exploration");
+    }    
+    public void Baloons()
+    {
+        SceneManager.LoadScene("FunRoom");
+    }    
     public void Tutorial()
     {
         SceneManager.LoadScene("tutorial");

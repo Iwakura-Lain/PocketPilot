@@ -97,7 +97,7 @@ public class Plane : MonoBehaviour
         // }
         if (Input.GetKey(KeyCode.W))
         {
-            thrust = thrustSpeedUp;
+            thrust = thrustSpeedUp; 
         }
         if (Input.GetKey(KeyCode.S))
         {

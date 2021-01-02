@@ -27,6 +27,7 @@
         </e>
         <e p="MouseFlight" t="Include">
           <e p="Scripts" t="Include">
+            <e p="CamSpeeding.cs" t="Include" />
             <e p="MouseFlightController.cs" t="Include" />
             <e p="Plane.cs" t="Include" />
           </e>

@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Landing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaypointPlay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/CamSpeeding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -30,7 +31,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlaneMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/MouseFlightController.cs" />
         <option value="$PROJECT_DIR$/Assets/DustEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/QuickOutline/Scripts/Outline.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/Toon.shader" />
@@ -46,7 +46,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs" />
         <option value="$PROJECT_DIR$/Assets/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowFollow2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinimapCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArowFollow.cs" />
@@ -61,6 +60,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
         <option value="$PROJECT_DIR$/Assets/Baloon.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/MouseFlightController.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/CamSpeeding.cs" />
       </list>
     </option>
   </component>

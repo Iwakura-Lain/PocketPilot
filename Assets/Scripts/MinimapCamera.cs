@@ -13,10 +13,13 @@ public class MinimapCamera : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
     }
     void Update()
-    {   //position of camera equal to position of player
-        transform.position = player.position + offset;
-
-        transform.rotation = Quaternion.Euler(90f, player.eulerAngles.y, 0f);
+    {
+        if (player)
+        {
+            transform.position = player.position + offset;
+            transform.rotation = Quaternion.Euler(90f, player.eulerAngles.y, 0f);
+        }
     }
 }
+
 

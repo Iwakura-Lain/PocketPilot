@@ -10,7 +10,6 @@ public class Initializer : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1;
         mouseFlightController = GameObject.FindObjectOfType<MouseFlightController>();
         Cursor.lockState = CursorLockMode.Locked;
         statistics.Init();

@@ -25,6 +25,7 @@
             </e>
           </e>
         </e>
+        <e p="FakeLoading.cs" t="Include" />
         <e p="MouseFlight" t="Include">
           <e p="Scripts" t="Include">
             <e p="CamSpeeding.cs" t="Include" />

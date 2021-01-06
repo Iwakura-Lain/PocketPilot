@@ -47,9 +47,6 @@
         <option value="$PROJECT_DIR$/Assets/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowFollow2.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MinimapCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ArowFollow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
@@ -63,6 +60,10 @@
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/CamSpeeding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/FakeLoading.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ArowFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MinimapCamera.cs" />
       </list>
     </option>
   </component>
@@ -186,10 +187,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="168" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605960128388" />
-    <state x="492" y="0" width="678" height="728" key="find.popup" timestamp="1608631213370">
+    <state x="492" y="0" width="678" height="728" key="find.popup" timestamp="1609938094269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="0" width="678" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1608631213370" />
+    <state x="492" y="0" width="678" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609938094269" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

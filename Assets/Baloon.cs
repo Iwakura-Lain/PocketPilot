@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Baloon : MonoBehaviour
 {
-    public float floatStrength = 3.5f; 
+    public float floatStrength = 3.5f;
          
     void Start()
     {

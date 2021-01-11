@@ -480,6 +480,11 @@ PrefabInstance:
       propertyPath: camSmoothSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3976062055525208980, guid: 1ffc29c315992624cb793d6cbf2c4ac1,
+        type: 3}
+      propertyPath: FOVzoom
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 4628290965115124670, guid: 1ffc29c315992624cb793d6cbf2c4ac1,
         type: 3}
       propertyPath: field of view
@@ -1298,6 +1303,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3540447682870158773, guid: 15d700cbffea5294ca912b21988c6d6e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872803839633048783, guid: 15d700cbffea5294ca912b21988c6d6e,
         type: 3}
       propertyPath: m_IsActive
       value: 0

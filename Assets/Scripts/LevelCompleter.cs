@@ -4,12 +4,13 @@ public class LevelCompleter : MonoBehaviour
 {
     public Animator[] doors;
     public Transform[] waypointNew;
+    public GameObject Hint;
     public GameObject LevelCompleteImage;
 
     public GameObject EndOfDemoScreen;
     private void Start()
     {
-        Messenger.AddListener("StopLanding", LevelFinished);
+        Messenger.AddListener("StopLanding", FirstPieceCollected);
         Messenger.AddListener<int>("OnCompleteLevelAction", OpenDoor);
     }
 
@@ -27,7 +28,11 @@ public class LevelCompleter : MonoBehaviour
             Messenger.Broadcast("NewTarget", waypointNew[level]);
         }
     }
-
+    void FirstPieceCollected()
+    {
+        Hint.SetActive(true);
+    }
+    
     void LevelFinished()
     {
         LevelCompleteImage.SetActive(true);

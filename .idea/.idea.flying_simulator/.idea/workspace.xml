@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Landing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaypointPlay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/CamSpeeding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,27 +44,28 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TutorialEnd.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Callback.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Messenger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs" />
         <option value="$PROJECT_DIR$/Assets/WaypointActivator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArrowFollow2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnterNewRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelScreen.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WaypointPlay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
         <option value="$PROJECT_DIR$/Assets/Baloon.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/MouseFlightController.cs" />
-        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/CamSpeeding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/FakeLoading.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ArowFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinimapCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Hint.cs" />
+        <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
       </list>
     </option>
   </component>
@@ -73,8 +75,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.47291023" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.2995356" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.47260273" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29965752" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="XThreadsFramesViewSplitterKey" value="0.37023592" />
@@ -89,10 +91,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3960">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="3960" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -119,38 +121,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="441" y="224" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1366.728@0.0.1366.728" timestamp="1604780656772" />
-    <state width="1323" height="29" key="GridCell.Tab.0.bottom" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.0.bottom" timestamp="1610375867553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
-    <state width="1323" height="29" key="GridCell.Tab.0.center" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610375867553" />
+    <state width="1199" height="29" key="GridCell.Tab.0.center" timestamp="1610375867553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
-    <state width="1323" height="29" key="GridCell.Tab.0.left" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610375867553" />
+    <state width="1199" height="29" key="GridCell.Tab.0.left" timestamp="1610375867553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
-    <state width="1323" height="29" key="GridCell.Tab.0.right" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610375867553" />
+    <state width="1199" height="29" key="GridCell.Tab.0.right" timestamp="1610375867553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
-    <state width="1323" height="29" key="GridCell.Tab.1.bottom" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610375867553" />
+    <state width="1199" height="29" key="GridCell.Tab.1.bottom" timestamp="1610375957428">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
-    <state width="1323" height="29" key="GridCell.Tab.1.center" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610375957428" />
+    <state width="1199" height="29" key="GridCell.Tab.1.center" timestamp="1610375957428">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
-    <state width="1323" height="29" key="GridCell.Tab.1.left" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1610375957428" />
+    <state width="1199" height="29" key="GridCell.Tab.1.left" timestamp="1610375957426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
-    <state width="1323" height="29" key="GridCell.Tab.1.right" timestamp="1608821091880">
+    <state width="1199" height="29" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1610375957426" />
+    <state width="1199" height="29" key="GridCell.Tab.1.right" timestamp="1610375957428">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="29" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1608821091880" />
+    <state width="1199" height="29" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1610375957428" />
     <state width="1323" height="29" key="GridCell.Tab.2.bottom" timestamp="1608821091880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -187,10 +189,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="168" y="18" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605960128388" />
-    <state x="492" y="0" width="678" height="728" key="find.popup" timestamp="1609938094269">
+    <state x="492" y="0" width="678" height="728" key="find.popup" timestamp="1610375655350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="0" width="678" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609938094269" />
+    <state x="492" y="0" width="678" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1610375655350" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -210,29 +212,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/LevelCompleter.cs</url>
-          <line>24</line>
+          <line>25</line>
           <properties documentPath="C:\Users\mmode\Documents\repositories\flying_simulator\Assets\Scripts\LevelCompleter.cs" initialLine="28">
             <startOffsets>
-              <option value="605" />
+              <option value="639" />
             </startOffsets>
             <endOffsets>
-              <option value="633" />
+              <option value="667" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/WaypointActivator.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Users\mmode\Documents\repositories\flying_simulator\Assets\Scripts\WaypointActivator.cs" initialLine="19">
-            <startOffsets>
-              <option value="439" />
-            </startOffsets>
-            <endOffsets>
-              <option value="440" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

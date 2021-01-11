@@ -64,6 +64,7 @@ public class Plane : MonoBehaviour
         Messenger.AddListener("StartLanding", StartLanding);
         Messenger.AddListener("StopLanding", stopLanding);
         Messenger.AddListener("CargoTaken", Setup);
+        Messenger.AddListener("FirstPieceIsDelivered", Setup);
 
         if (controller == null)
             Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
@@ -99,7 +100,7 @@ public class Plane : MonoBehaviour
         {
             thrust = thrustSpeedUp; 
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.F))
         {
             thrust = thrustSlowDown;
         }

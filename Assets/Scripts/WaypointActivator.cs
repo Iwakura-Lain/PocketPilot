@@ -12,19 +12,23 @@ public class WaypointActivator : MonoBehaviour
 
     void Start()
     {
-        Messenger.AddListener("CargoTaken", DisableWaypoint);
+        Messenger.AddListener("CargoTaken", ChangeWaypoint);
         Messenger.AddListener("EnemiesAreDestroyed", EnableWaypoint);
+        Messenger.AddListener("FirstPieceIsDelivered", DisableWaypoint);
     }
 
     private void EnableWaypoint()
     {
         waypoint.enabled = text1.enabled = text2.enabled = true;
     }
-    private void DisableWaypoint()
+    private void ChangeWaypoint()
     {
         text2.text = "Deliver the cargo";
         waypoint.enabled = text1.enabled = text2.enabled = false;
-
+    }
+    private void DisableWaypoint()
+    {
+        waypoint.enabled = text1.enabled = text2.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other) //for doors

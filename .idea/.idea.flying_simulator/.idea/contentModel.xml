@@ -66,6 +66,7 @@
           <e p="ChaserCopy.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="EnterNewRoom.cs" t="Include" />
+          <e p="Hint.cs" t="Include" />
           <e p="Initializer.cs" t="Include" />
           <e p="KillMe.cs" t="Include" />
           <e p="Landing.cs" t="Include" />

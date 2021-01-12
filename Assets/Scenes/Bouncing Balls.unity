@@ -9736,7 +9736,7 @@ PrefabInstance:
     - target: {fileID: 8375006845875284499, guid: a52025cae2ac8dc498cae54a53ea5674,
         type: 3}
       propertyPath: FOVzoom
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8751693018711741403, guid: a52025cae2ac8dc498cae54a53ea5674,
         type: 3}

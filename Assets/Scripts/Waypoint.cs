@@ -27,9 +27,17 @@ public class Waypoint : MonoBehaviour
         meter = GameObject.Find("meter").GetComponent<Text>();
         AboveText = GameObject.Find("hold f").GetComponent<Text>();
         progressBar = GameObject.Find("progress").GetComponent<Image>();
+        Messenger.AddListener("FirstPieceIsDelivered", TurnOff);
+
     }
 
-    private void UpdateTarget(Transform newTarget)
+   private void TurnOff()
+   {
+       AboveText.enabled = false;
+       this.enabled = false;
+   }
+
+   private void UpdateTarget(Transform newTarget)
     {
         target = newTarget;
     }

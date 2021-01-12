@@ -59,6 +59,7 @@
             </e>
           </e>
         </e>
+        <e p="RubicPiece.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ArowFollow.cs" t="Include" />
           <e p="Callback.cs" t="Include" />

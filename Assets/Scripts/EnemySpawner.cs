@@ -28,9 +28,9 @@ public class EnemySpawner : MonoBehaviour
     private void Spawn(int setOfPositions = 0)
     {
         var array = spawnPositions[setOfPositions];
-         foreach (Transform sp in array)
-         {
-             Instantiate(enemyPrefab, sp.position, plane.transform.rotation);
-         }
+         // foreach (Transform sp in array)
+         // {
+         //     Instantiate(enemyPrefab, sp.position, plane.transform.rotation);
+         // }
     }
 }

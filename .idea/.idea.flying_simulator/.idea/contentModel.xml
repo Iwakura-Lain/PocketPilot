@@ -18,6 +18,7 @@
             </e>
           </e>
         </e>
+        <e p="Delivery.cs" t="Include" />
         <e p="EffectExamples" t="Include">
           <e p="Shared" t="Include">
             <e p="Shaders" t="Include">
@@ -26,6 +27,7 @@
           </e>
         </e>
         <e p="FakeLoading.cs" t="Include" />
+        <e p="Interfaces.cs" t="Include" />
         <e p="MouseFlight" t="Include">
           <e p="Scripts" t="Include">
             <e p="CamSpeeding.cs" t="Include" />
@@ -69,6 +71,7 @@
           <e p="EnterNewRoom.cs" t="Include" />
           <e p="Hint.cs" t="Include" />
           <e p="Initializer.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
           <e p="KillMe.cs" t="Include" />
           <e p="Landing.cs" t="Include" />
           <e p="LevelCompleter.cs" t="Include" />

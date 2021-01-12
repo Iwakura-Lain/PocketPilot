@@ -1,26 +1,36 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[System.Serializable] 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public GameObject plane;
-    public Transform[] SpawnPositions;
+    
+    [Serializable]
+    public class SpawnPositions
+    {
+        public Transform[] spawnPositions;
+    }
+    public SpawnPositions[] spawnPositions;
+    
     void Start()
     {
-        Messenger.AddListener("CargoTaken", Spawn);
+        Messenger.AddListener<int>("CargoTaken", Spawn);
         plane = GameObject.FindGameObjectWithTag("Player");
         if (SceneManager.GetActiveScene().name == "Playground")
         {
             Spawn();
-            Messenger.AddListener("EnemiesAreDestroyed", Spawn);
+            Messenger.AddListener<int>("EnemiesAreDestroyed", Spawn);
         }
     }
-    private void Spawn()
+    private void Spawn(int setOfPositions = 0)
     {
-        foreach (var spawnPosition in SpawnPositions)
-        {
-           Instantiate(enemyPrefab, spawnPosition.position, plane.transform.rotation);
-        }
+        var array = spawnPositions[setOfPositions];
+         // foreach (Transform sp in array)
+         // {
+         //     Instantiate(enemyPrefab, sp.position, plane.transform.rotation);
+         // }
     }
 }

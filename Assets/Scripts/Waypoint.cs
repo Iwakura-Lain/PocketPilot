@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using  DG.Tweening;
-using UnityEngine.Serialization;
 
-public class Waypoint : MonoBehaviour
+public class Waypoint : MonoBehaviour, IInteractable
 {
     public Image img;
     public Transform target;
@@ -14,7 +13,6 @@ public class Waypoint : MonoBehaviour
     
     public Text AboveText;
     public Image progressBar;
-    public GameObject cargo;
     public Plane plane;
 
     public static bool isThereEnemiesAround;
@@ -84,7 +82,7 @@ public class Waypoint : MonoBehaviour
                 plane.OnLanding = AboveText.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    OnLand();
+                    Interact();
                 }
            // }
         }
@@ -96,9 +94,9 @@ public class Waypoint : MonoBehaviour
         
     }
 
-    void OnLand()
+    public void Interact()
     {
-        if (!cargo)
+        if (Inventory.Full)
         {
             Messenger.Broadcast("StartLanding");
             progressBar.DOFillAmount(1, 1).OnComplete(() =>
@@ -114,8 +112,7 @@ public class Waypoint : MonoBehaviour
             {
                 progressBar.fillAmount = 0;
                 UpdateTarget(deliveryPoint);
-                Destroy(cargo);
-                Messenger.Broadcast("CargoTaken");
+                Messenger.Broadcast<int>("CargoTaken", 0);
             });
         }
 

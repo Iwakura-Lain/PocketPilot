@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class LevelCompleter : MonoBehaviour
 {
@@ -11,10 +12,20 @@ public class LevelCompleter : MonoBehaviour
     private void Start()
     {
         Messenger.AddListener("StopLanding", FirstPieceCollected);
-        Messenger.AddListener<int>("OnCompleteLevelAction", OpenDoor);
+        //Messenger.AddListener<int>("OnCompleteLevelAction", OpenDoor);
+        Messenger.AddListener("EnemiesAreDestroyed", OpenDoors);
+
     }
 
-    public void OpenDoor(int level)
+    private void OpenDoors()
+    {
+        foreach (var door in doors)
+        {
+            door.enabled = true;
+        }
+    }
+
+    /*public void OpenDoor(int level)
     {
         LevelCompleteImage.SetActive(false);
         if (doors.Length == level)
@@ -27,7 +38,7 @@ public class LevelCompleter : MonoBehaviour
             
             Messenger.Broadcast("NewTarget", waypointNew[level]);
         }
-    }
+    }*/
     void FirstPieceCollected()
     {
         Hint.SetActive(true);

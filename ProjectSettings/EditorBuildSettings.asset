@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelAleks.unity
     guid: b19be167a30bac545b4899fd7821d5dd
   - enabled: 1
-    path: Assets/Scenes/Exploration.unity
+    path: Assets/Scenes/BirthdayParty.unity
     guid: d73fe442e847bc94daa159c96c65de9b
   - enabled: 1
     path: Assets/Scenes/Bouncing Balls.unity

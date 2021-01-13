@@ -5,27 +5,30 @@ using UnityEngine.UI;
 public class Delivery : MonoBehaviour, IInteractable
 {
     public Transform player;
-    public Image progressBar;
+    public Animator progressBar;
+
     public Text holdF;
     public GameObject cubePrefab;
+    private bool isFirst = true;
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
-        holdF = GameObject.Find("hold f").GetComponent<Text>();
-        progressBar = GameObject.Find("progress").GetComponent<Image>();
-
+        holdF = GameObject.Find("hold f_deliver").GetComponent<Text>();
+        progressBar = GameObject.Find("progress").GetComponent<Animator>();
     }
     void Update()
     {
         if ((int) Vector3.Distance(player.position, transform.position) < 5)
         {
+            Messenger.AddListener("OnInteract", Interact);
+
             if (Inventory.Full)
             {
                 holdF.text = "Hold F";
                 holdF.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    Interact();
+                    progressBar.Play("Base Layer.progressBar", 0, 0);
                 }
             }
         }
@@ -38,11 +41,15 @@ public class Delivery : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        progressBar.DOFillAmount(1, 1).OnComplete(() =>
+        Messenger.RemoveListener("OnInteract", Interact);
+
+        if (isFirst)
         {
-            progressBar.fillAmount = 0;
-            Inventory.Full = false;
-            Instantiate(cubePrefab, transform.position, transform.rotation);
-        });
+            Messenger.Broadcast("StartLanding");
+            Messenger.Broadcast("StopLanding");
+            isFirst = false;
+        }
+        Inventory.Full = false;
+        Instantiate(cubePrefab);
     }
 }

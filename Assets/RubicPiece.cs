@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class RubicPiece : MonoBehaviour, IInteractable
@@ -11,22 +7,24 @@ public class RubicPiece : MonoBehaviour, IInteractable
     public Material highlighted;
     public Transform player;
     public MeshRenderer myRenderer;
-    public Image progressBar;
-
+    public Animator progressBar;
+    public int myNumber;
     public Text holdF;
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
-        holdF = GameObject.Find("hold f").GetComponent<Text>();
+        holdF = GameObject.Find("hold f_pick").GetComponent<Text>();
         myRenderer = GetComponent<MeshRenderer>();
         myRenderer.material = normal;
-        progressBar = GameObject.Find("progress").GetComponent<Image>();
+        progressBar = GameObject.Find("progress").GetComponent<Animator>();
     }
 
     void Update()
     {
         if ((int) Vector3.Distance(player.position, transform.position) < 5)
         {
+            Messenger.AddListener("OnInteract", Interact);
+
             if (Inventory.Full)
             {
                 holdF.text = "You can carry only one item at once!";
@@ -39,7 +37,7 @@ public class RubicPiece : MonoBehaviour, IInteractable
                 holdF.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    Interact();
+                    progressBar.Play("Base Layer.progressBar", 0, 0);
                 }
             }
         }
@@ -52,11 +50,9 @@ public class RubicPiece : MonoBehaviour, IInteractable
 
      public void Interact()
     {
-        progressBar.DOFillAmount(1, 1).OnComplete(() =>
-        {
-            progressBar.fillAmount = 0;
-            Inventory.Full = true;
-            Destroy(gameObject);
-        });
+        Inventory.Full = true;
+        Messenger.Broadcast("SpawnEnemies", 0); //spawns enemies on a certain set of positions
+        Messenger.RemoveListener("OnInteract", Interact);
+        Destroy(gameObject);
     }
 }

@@ -11,8 +11,7 @@ public class Waypoint : MonoBehaviour, IInteractable
     // To adjust the position of the icon
     public Vector3 offset;
     
-    public Text AboveText;
-    public Image progressBar;
+    public Animator progressBar;
     public Plane plane;
 
     public static bool isThereEnemiesAround;
@@ -23,15 +22,12 @@ public class Waypoint : MonoBehaviour, IInteractable
         Messenger.AddListener<Transform>("NewTarget", UpdateTarget);
         img = GameObject.Find("marker").GetComponent<Image>();
         meter = GameObject.Find("meter").GetComponent<Text>();
-        AboveText = GameObject.Find("hold f").GetComponent<Text>();
-        progressBar = GameObject.Find("progress").GetComponent<Image>();
+        progressBar = GameObject.Find("progress").GetComponent<Animator>();
         Messenger.AddListener("FirstPieceIsDelivered", TurnOff);
-
     }
 
    private void TurnOff()
    {
-       AboveText.enabled = false;
        this.enabled = false;
    }
 
@@ -78,43 +74,21 @@ public class Waypoint : MonoBehaviour, IInteractable
         meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
         if ((int) Vector3.Distance(target.position, transform.position) < 5)
         {
-            meter.color = img.color = Color.green; 
-                plane.OnLanding = AboveText.enabled = true;
+            Messenger.AddListener("OnInteract", Interact);
+
+                plane.OnLanding = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    Interact();
+                    progressBar.Play("Base Layer.progressBar", 0, 0);
                 }
-           // }
         }
-        else 
-        {
-            meter.color = img.color =  Color.white;
-            plane.OnLanding = AboveText.enabled = false;
-        }
-        
     }
 
     public void Interact()
     {
-        if (Inventory.Full)
-        {
-            Messenger.Broadcast("StartLanding");
-            progressBar.DOFillAmount(1, 1).OnComplete(() =>
-            {
-                progressBar.fillAmount = 0;
-                Messenger.Broadcast("StopLanding");
-
-            });
-        }
-        else
-        {
-            progressBar.DOFillAmount(1, 1).OnComplete(() =>
-            {
-                progressBar.fillAmount = 0;
-                UpdateTarget(deliveryPoint);
-                Messenger.Broadcast<int>("CargoTaken", 0);
-            });
-        }
-
+        UpdateTarget(deliveryPoint);
+        Messenger.Broadcast("CargoTaken");
+        Messenger.Broadcast("SpawnEnemies", 0);
+        Messenger.RemoveListener("OnInteract", Interact);
     }
 }

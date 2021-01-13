@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,28 +10,48 @@ public class EnemySpawner : MonoBehaviour
     public GameObject plane;
     
     [Serializable]
-    public class SpawnPositions
+    public class SpawnPositions: IEnumerator,IEnumerable
     {
         public Transform[] spawnPositions;
+        private int position = -1;
+
+        //IEnumerator and IEnumerable require these methods.
+        public IEnumerator GetEnumerator()
+        {
+            return this;
+        }
+        //IEnumerator
+        public bool MoveNext()
+        {
+            position++;
+            return (position < spawnPositions.Length);
+        }
+        //IEnumerable
+        public void Reset()
+        {
+            position = 0;
+        }
+        //IEnumerable
+        public object Current
+        {
+            get { return spawnPositions[position];}
+        }
     }
     public SpawnPositions[] spawnPositions;
     
     void Start()
     {
-        Messenger.AddListener<int>("CargoTaken", Spawn);
+        Messenger.AddListener<int>("SpawnEnemies", Spawn);
         plane = GameObject.FindGameObjectWithTag("Player");
-        if (SceneManager.GetActiveScene().name == "Playground")
-        {
-            Spawn();
-            Messenger.AddListener<int>("EnemiesAreDestroyed", Spawn);
-        }
     }
-    private void Spawn(int setOfPositions = 0)
+    private void Spawn(int setOfPositions)
     {
         var array = spawnPositions[setOfPositions];
-         // foreach (Transform sp in array)
-         // {
-         //     Instantiate(enemyPrefab, sp.position, plane.transform.rotation);
-         // }
+          foreach (Transform sp in array)
+          {
+              Instantiate(enemyPrefab, sp.position, plane.transform.rotation);
+          }
     }
+    
+   
 }

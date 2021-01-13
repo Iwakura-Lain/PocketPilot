@@ -18,7 +18,7 @@ public class Delivery : MonoBehaviour, IInteractable
     }
     void Update()
     {
-        if ((int) Vector3.Distance(player.position, transform.position) < 5)
+        if (player && (int) Vector3.Distance(player.position, transform.position) < 5)
         {
             if (Inventory.Full)
             {

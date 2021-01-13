@@ -88,10 +88,7 @@ public class Waypoint : MonoBehaviour, IInteractable
     {
         Messenger.RemoveListener("OnInteract", Interact);
         
-        print("Interact, waypoint");
-
         UpdateTarget(deliveryPoint);
         Messenger.Broadcast("CargoTaken");
-        Messenger.Broadcast("SpawnEnemies", 0);
     }
 }

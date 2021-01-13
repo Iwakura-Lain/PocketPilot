@@ -51,10 +51,8 @@ public class RubicPiece : MonoBehaviour, IInteractable
      public void Interact()
     {
         Messenger.RemoveListener("OnInteract", Interact);
-        print("Interact, rubic");
-
         Inventory.Full = true;
-        Messenger.Broadcast("SpawnEnemies", 0); //spawns enemies on a certain set of positions
+        Messenger.Broadcast("SpawnEnemies", myNumber); //spawns enemies on a certain set of positions
         Destroy(gameObject);
     }
 }

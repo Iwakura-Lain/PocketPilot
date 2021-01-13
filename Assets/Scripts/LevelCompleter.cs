@@ -42,6 +42,7 @@ public class LevelCompleter : MonoBehaviour
     void FirstPieceCollected()
     {
         Hint.SetActive(true);
+        Time.timeScale = 0;
     }
     
     void LevelFinished()

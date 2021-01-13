@@ -8,6 +8,7 @@ public class Hint : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            Time.timeScale = 1;
             Messenger.Broadcast("FirstPieceIsDelivered");//send an event to place 3 other parts
             gameObject.SetActive(false);
         }

@@ -107,11 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1ecce566b6bb0469bb3990b1519c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 2100000, guid: 86936cb073f30ea49b258245fb5a6cbb, type: 2}
+  normal: {fileID: 2100000, guid: 406728732c1976946988991faa40768b, type: 2}
   highlighted: {fileID: 2100000, guid: b82d6afaba261a44e85999b4343ea82e, type: 2}
   player: {fileID: 0}
   myRenderer: {fileID: 0}
   progressBar: {fileID: 0}
+  myNumber: 0
   holdF: {fileID: 0}
 --- !u!54 &-2813597900865806642
 Rigidbody:

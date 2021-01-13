@@ -46,6 +46,7 @@ public class EnemySpawner : MonoBehaviour
     }
     private void Spawn(int setOfPositions)
     {
+        print("spawn for " + setOfPositions + " set");
         var array = spawnPositions[setOfPositions];
           foreach (Transform sp in array)
           {

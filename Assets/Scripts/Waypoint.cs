@@ -74,21 +74,24 @@ public class Waypoint : MonoBehaviour, IInteractable
         meter.text = ((int)Vector3.Distance(target.position, transform.position)).ToString() + "m";
         if ((int) Vector3.Distance(target.position, transform.position) < 5)
         {
-            Messenger.AddListener("OnInteract", Interact);
-
-                plane.OnLanding = true;
+            plane.OnLanding = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    progressBar.Play("Base Layer.progressBar", 0, 0);
+                    Messenger.AddListener("OnInteract", Interact);
+                    progressBar.enabled = true;
+                   // progressBar.Play("Base Layer.progressBar", 0, 0);
                 }
         }
     }
 
     public void Interact()
     {
+        Messenger.RemoveListener("OnInteract", Interact);
+        
+        print("Interact, waypoint");
+
         UpdateTarget(deliveryPoint);
         Messenger.Broadcast("CargoTaken");
         Messenger.Broadcast("SpawnEnemies", 0);
-        Messenger.RemoveListener("OnInteract", Interact);
     }
 }

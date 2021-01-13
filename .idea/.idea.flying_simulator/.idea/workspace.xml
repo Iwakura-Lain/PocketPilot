@@ -72,10 +72,10 @@
         <option value="$PROJECT_DIR$/Assets/MouseFlight/Scripts/Plane.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Statistics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/ProgressBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/RubicPiece.cs" />
         <option value="$PROJECT_DIR$/Assets/Delivery.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/RubicPiece.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scenes/ProgressBar.cs" />
       </list>
     </option>
   </component>
@@ -101,10 +101,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17376">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17376" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -238,10 +238,10 @@
           <line>45</line>
           <properties documentPath="C:\Users\mmode\Documents\repositories\flying_simulator\Assets\Delivery.cs" initialLine="46">
             <startOffsets>
-              <option value="1164" />
+              <option value="1208" />
             </startOffsets>
             <endOffsets>
-              <option value="1176" />
+              <option value="1220" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="37" />

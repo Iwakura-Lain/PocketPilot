@@ -20,14 +20,13 @@ public class Delivery : MonoBehaviour, IInteractable
     {
         if ((int) Vector3.Distance(player.position, transform.position) < 5)
         {
-            Messenger.AddListener("OnInteract", Interact);
-
             if (Inventory.Full)
             {
                 holdF.text = "Hold F";
                 holdF.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    Messenger.AddListener("OnInteract", Interact);
                     progressBar.Play("Base Layer.progressBar", 0, 0);
                 }
             }
@@ -42,6 +41,7 @@ public class Delivery : MonoBehaviour, IInteractable
     public void Interact()
     {
         Messenger.RemoveListener("OnInteract", Interact);
+        print("Interact, delivery");
 
         if (isFirst)
         {
@@ -50,6 +50,6 @@ public class Delivery : MonoBehaviour, IInteractable
             isFirst = false;
         }
         Inventory.Full = false;
-        Instantiate(cubePrefab);
+        Instantiate(cubePrefab, player.position, player.rotation);
     }
 }

@@ -23,8 +23,6 @@ public class RubicPiece : MonoBehaviour, IInteractable
     {
         if ((int) Vector3.Distance(player.position, transform.position) < 5)
         {
-            Messenger.AddListener("OnInteract", Interact);
-
             if (Inventory.Full)
             {
                 holdF.text = "You can carry only one item at once!";
@@ -37,6 +35,8 @@ public class RubicPiece : MonoBehaviour, IInteractable
                 holdF.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    Messenger.AddListener("OnInteract", Interact);
+
                     progressBar.Play("Base Layer.progressBar", 0, 0);
                 }
             }
@@ -50,9 +50,11 @@ public class RubicPiece : MonoBehaviour, IInteractable
 
      public void Interact()
     {
+        Messenger.RemoveListener("OnInteract", Interact);
+        print("Interact, rubic");
+
         Inventory.Full = true;
         Messenger.Broadcast("SpawnEnemies", 0); //spawns enemies on a certain set of positions
-        Messenger.RemoveListener("OnInteract", Interact);
         Destroy(gameObject);
     }
 }

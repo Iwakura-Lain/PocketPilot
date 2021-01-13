@@ -539,7 +539,7 @@ MonoBehaviour:
   player: {fileID: 0}
   progressBar: {fileID: 0}
   holdF: {fileID: 0}
-  cubePrefab: {fileID: 2678611036645181864, guid: 11c1efb7a65c85d4da3cc1f6191ee82b,
+  cubePrefab: {fileID: 2678611036645181864, guid: 0ec87e0d2f257a840bf5402ff7452e36,
     type: 3}
 --- !u!64 &224275999
 MeshCollider:
@@ -1293,6 +1293,10 @@ PrefabInstance:
       propertyPath: Hint
       value: 
       objectReference: {fileID: 1634649762}
+    - target: {fileID: 1679311919, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3540447681490457539, guid: 15d700cbffea5294ca912b21988c6d6e,
         type: 3}
       propertyPath: m_LocalPosition.x

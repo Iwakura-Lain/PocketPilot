@@ -9250,7 +9250,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 235170632, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 401862932, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
       propertyPath: levelCompleter
@@ -9278,19 +9278,19 @@ PrefabInstance:
       objectReference: {fileID: 1159768415}
     - target: {fileID: 1159768416, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1330313278, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1947147356, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2092534518, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 569658376613248305, guid: 15d700cbffea5294ca912b21988c6d6e,
         type: 3}
@@ -9456,6 +9456,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285119008946627750, guid: 15d700cbffea5294ca912b21988c6d6e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15d700cbffea5294ca912b21988c6d6e, type: 3}
@@ -11066,7 +11071,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8151868713352426013, guid: fef5b07dd3d8e5f4281729785767d298,
     type: 3}
   plane: {fileID: 0}
-  SpawnPositions: []
+  spawnPositions: []
 --- !u!1 &732584975
 GameObject:
   m_ObjectHideFlags: 0
@@ -31489,9 +31494,7 @@ MonoBehaviour:
   deliveryPoint: {fileID: 0}
   meter: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
-  AboveText: {fileID: 0}
   progressBar: {fileID: 0}
-  cargo: {fileID: 0}
   plane: {fileID: 0}
   targets:
   - {fileID: 1092156118}

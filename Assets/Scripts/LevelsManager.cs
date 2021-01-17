@@ -15,33 +15,12 @@ public class LevelsManager : MonoBehaviour
     }    
     public void Playground()
     {
-        SceneManager.LoadScene("Playground");
-    }    
-    public void Physics()
-    {
-        SceneManager.LoadScene("LevelAleks");
-    }    
-    public void Waypoints()
-    {
-        SceneManager.LoadScene("Waypoints");
-    }    
-    public void Bouncing()
-    {
-        SceneManager.LoadScene("Bouncing Balls");
-    }    
+        SceneManager.LoadScene("BirthdayParty");
+    }
     public void Exploration()
     {
-        SceneManager.LoadScene("Exploration");
-    }    
-    public void Baloons()
-    {
-        SceneManager.LoadScene("FunRoom");
-    }    
-    public void Tutorial()
-    {
-        SceneManager.LoadScene("tutorial");
+        SceneManager.LoadScene("TimeChallenge");
     }
-
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

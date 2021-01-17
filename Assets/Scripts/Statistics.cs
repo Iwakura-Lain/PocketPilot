@@ -2,13 +2,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Statistics : MonoBehaviour //TODO train in interfaces and make stats an interface
+public class Statistics : MonoBehaviour 
 {
     private int currentDestroyedCount;
     private Text text;
     private int totalCount;
     public int totalRingCount;
-    private int currentRingCount;
+    public int currentRingCount;
 
     private void Reset()
     {
@@ -36,8 +36,8 @@ public class Statistics : MonoBehaviour //TODO train in interfaces and make stat
     {
         currentRingCount++;
         var s = "{0} of {1}";
-        if (text)
-            text.text = string.Format(s, currentRingCount, totalRingCount);
+      //  if (text)
+       //     text.text = string.Format(s, currentRingCount, totalRingCount);
     }
 
     private void UpdateStatistics()

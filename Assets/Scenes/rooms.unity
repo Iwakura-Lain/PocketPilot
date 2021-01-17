@@ -2065,6 +2065,21 @@ PrefabInstance:
       propertyPath: AfterlifeUI
       value: 
       objectReference: {fileID: 7285119008489185456}
+    - target: {fileID: 58052180839138402, guid: c285ee1847b52ca4c9f3241dbc9cb25b,
+        type: 3}
+      propertyPath: thrustSpeedUp
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785903271907365358, guid: c285ee1847b52ca4c9f3241dbc9cb25b,
+        type: 3}
+      propertyPath: FOVzoomIn
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785903271907365358, guid: c285ee1847b52ca4c9f3241dbc9cb25b,
+        type: 3}
+      propertyPath: FOVzoom
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 3885462363254488875, guid: c285ee1847b52ca4c9f3241dbc9cb25b,
         type: 3}
       propertyPath: m_Name

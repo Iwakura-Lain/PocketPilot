@@ -196,9 +196,7 @@ MonoBehaviour:
   deliveryPoint: {fileID: 0}
   meter: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
-  AboveText: {fileID: 0}
   progressBar: {fileID: 0}
-  cargo: {fileID: 0}
   plane: {fileID: 0}
 --- !u!1 &4645986189938722708
 GameObject:

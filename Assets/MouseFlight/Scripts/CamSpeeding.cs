@@ -6,6 +6,7 @@ public class CamSpeeding : MonoBehaviour
 {
     private Camera cam;
     public int FOVzoom;
+    public int FOVzoomIn;
     private int FOVnormal;
     void Start()
     {
@@ -25,5 +26,11 @@ public class CamSpeeding : MonoBehaviour
             cam.fieldOfView = Mathf.Lerp(FOVzoom, FOVnormal,2);
 
         }
+
+         if (Input.GetKey(KeyCode.S))
+        {
+            cam.fieldOfView = Mathf.Lerp(FOVnormal, FOVzoomIn, 2);
+        }
+        
     }
 }

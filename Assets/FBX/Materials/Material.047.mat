@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: plane
+  m_Name: Material.047
   m_Shader: {fileID: 4800000, guid: 0692e033a6ea9fc4ab311637f4d09ec3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -81,9 +81,9 @@ Material:
     m_Colors:
     - Color_59EEE9C1: {r: 0.15442435, g: 0.14110893, b: 0.1981132, a: 0}
     - Color_7A07E306: {r: 0.6981132, g: 0.6195011, b: 0.5499288, a: 0}
-    - Color_E9C956F0: {r: 0.8, g: 0.8, b: 0.8, a: 0}
-    - _Color: {r: 0.6037736, g: 0, b: 0, a: 1}
-    - _Emission: {r: 0.32156864, g: 0.007843138, b: 0.007843138, a: 1}
+    - Color_E9C956F0: {r: 0.6509804, g: 0.101960786, b: 0.03529412, a: 0}
+    - _Color: {r: 0.6500056, g: 0.10047904, b: 0.033438124, a: 1}
+    - _Emission: {r: 0.052561343, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}

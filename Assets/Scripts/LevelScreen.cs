@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,22 +11,19 @@ public class LevelScreen : MonoBehaviour
     public LevelCompleter levelCompleter;
     public Plane plane;
     public Tutorial tutorial;
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+    }
+
     void Update()
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene("Menu");
             Cursor.lockState = CursorLockMode.None;
-            //  levelNumber++;
-            //
-            // // plane.Setup(levelNumber);
-            //  levelCompleter.OpenDoor(levelNumber);
-            //  if (tutorial)
-            //  {
-            //      tutorial.Door(levelNumber);
-            //  }
-            //  Messenger.Broadcast("OnCompleteLevelAction", levelNumber);
-            //  gameObject.SetActive(false);
         }
 
 

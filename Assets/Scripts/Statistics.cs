@@ -20,7 +20,6 @@ public class Statistics : MonoBehaviour
 
     public void Init()
     {
-        PlaneMovement.OnDestroyed += YouHaveBeenCatched;
         Messenger.AddListener("StopLanding", Reset);
         Messenger.AddListener("OnInitChaser", AddToTotalCount);
         Messenger.AddListener("OnEnterRing", UpdateRingCount);
@@ -32,18 +31,19 @@ public class Statistics : MonoBehaviour
     {
         totalCount++;
     }
+    private void AddToTotalRingCount()
+    {
+        totalRingCount++;
+    }
     private void UpdateRingCount()
     {
         currentRingCount++;
-        var s = "{0} of {1}";
-      //  if (text)
-       //     text.text = string.Format(s, currentRingCount, totalRingCount);
     }
 
     private void UpdateStatistics()
     {
         currentDestroyedCount++;
-        var s = "You destroyed {0} of {1} enemy jets";
+        var s = "destroyed:{0} of {1} enemy jets";
         if (text)
             text.text = string.Format(s, currentDestroyedCount, totalCount);
         
@@ -60,9 +60,4 @@ public class Statistics : MonoBehaviour
         }
     }
 
-    private void YouHaveBeenCatched()
-    {
-        if (text)
-            text.text = "You were destroyed";
-    }
 }

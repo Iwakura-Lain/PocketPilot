@@ -208,6 +208,7 @@ public class Plane : MonoBehaviour
 
     private void BlowMe()
     {
+        Messenger.Broadcast("Death");
         Messenger.RemoveListener("StartLanding", StartLanding);
         Messenger.RemoveListener("StopLanding", stopLanding);
         Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);

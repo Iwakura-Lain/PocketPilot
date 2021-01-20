@@ -1,21 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class RubicPiece : MonoBehaviour, IInteractable
 {
-    public Material normal;
-    public Material highlighted;
     public Transform player;
-    public MeshRenderer myRenderer;
     public Animator progressBar;
     public int myNumber;
-    public Text holdF;
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
-        holdF = GameObject.Find("hold f_pick").GetComponent<Text>();
-        myRenderer = GetComponent<MeshRenderer>();
-        myRenderer.material = normal;
         progressBar = GameObject.Find("progress").GetComponent<Animator>();
     }
 
@@ -25,14 +19,10 @@ public class RubicPiece : MonoBehaviour, IInteractable
         {
             if (Inventory.Full)
             {
-                holdF.text = "You can carry only one item at once!";
-                holdF.enabled = true;
+                return;
             }
             else
             {
-                holdF.text = "Hold F";
-                myRenderer.material = highlighted;
-                holdF.enabled = true;
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     Messenger.AddListener("OnInteract", Interact);
@@ -41,11 +31,7 @@ public class RubicPiece : MonoBehaviour, IInteractable
                 }
             }
         }
-        else
-        {
-            holdF.enabled = false;
-        }
-        
+
     }
 
      public void Interact()

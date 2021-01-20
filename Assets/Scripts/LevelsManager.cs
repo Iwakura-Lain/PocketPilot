@@ -4,7 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
+    public GameObject buttonTimeLvl, buttonBDLvl;
+    public static bool isMainLevelCompleted = false;
+    public static bool isTimeLevelCompleted = false;
+    
     public GameObject levelChoice;
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            if (isMainLevelCompleted)
+                buttonTimeLvl.SetActive(true);
+            if (isTimeLevelCompleted)
+                buttonBDLvl.SetActive(true);
+        }
+    }
+
     public void Play()
     {
         levelChoice.SetActive(true);

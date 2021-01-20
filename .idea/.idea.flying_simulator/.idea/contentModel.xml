@@ -6,7 +6,6 @@
     <e p="C:\Users\mmode\Documents\repositories\flying_simulator" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Baloon.cs" t="Include" />
         <e p="Ciconia Studio" t="Include">
           <e p="Shaders" t="Include">
             <e p="Double Sided Shaders" t="Include">
@@ -17,7 +16,6 @@
             </e>
           </e>
         </e>
-        <e p="Delivery.cs" t="Include" />
         <e p="EffectExamples" t="Include">
           <e p="Shared" t="Include">
             <e p="Shaders" t="Include">
@@ -25,8 +23,6 @@
             </e>
           </e>
         </e>
-        <e p="FakeLoading.cs" t="Include" />
-        <e p="Interfaces.cs" t="Include" />
         <e p="MouseFlight" t="Include">
           <e p="Scripts" t="Include">
             <e p="CamSpeeding.cs" t="Include" />
@@ -44,17 +40,21 @@
             <e p="HiddenNormalsTexture.shader" t="Include" />
           </e>
         </e>
-        <e p="RubicPiece.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ArowFollow.cs" t="Include" />
           <e p="BallsParty.cs" t="Include" />
+          <e p="Baloon.cs" t="Include" />
           <e p="Callback.cs" t="Include" />
           <e p="Chaser.cs" t="Include" />
           <e p="ChaserCopy.cs" t="Include" />
+          <e p="Delivery.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="EnterNewRoom.cs" t="Include" />
+          <e p="FakeLoading.cs" t="Include" />
           <e p="Hint.cs" t="Include" />
+          <e p="HintF.cs" t="Include" />
           <e p="Initializer.cs" t="Include" />
+          <e p="Interfaces.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
           <e p="KillMe.cs" t="Include" />
           <e p="Landing.cs" t="Include" />
@@ -66,6 +66,7 @@
           <e p="PlaneMovement.cs" t="Include" />
           <e p="ProgressBar.cs" t="Include" />
           <e p="Ring.cs" t="Include" />
+          <e p="RubicPiece.cs" t="Include" />
           <e p="StartCountdown.cs" t="Include" />
           <e p="Statistics.cs" t="Include" />
           <e p="TimeChallenge.cs" t="Include" />

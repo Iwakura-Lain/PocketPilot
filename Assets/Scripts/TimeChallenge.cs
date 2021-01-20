@@ -10,15 +10,21 @@ public class TimeChallenge : MonoBehaviour
     public Text Score;
     public GameObject ScoreScreen;
     public Statistics stats;
-    public float timeRemaining = 60;
+    private float timeRemaining;
+    public float totalTime = 60;
     public bool timerIsRunning = false;
     
     private void Start()
     {
+        timeRemaining = totalTime;
+        Messenger.AddListener("Death", StopTimer);
         timerIsRunning = true;
     }
     void Update()
     {
+        var s = "You collected {0} of 13 rings for {2} seconds";
+        if (Score)
+            Score.text = string.Format(s, stats.currentRingCount, stats.totalRingCount, Mathf.Round(totalTime - timeRemaining));
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
@@ -28,13 +34,7 @@ public class TimeChallenge : MonoBehaviour
             }
             else
             {
-                Time.timeScale = 0;
-                timeRemaining = 0;
-                timerIsRunning = false;
-                ScoreScreen.SetActive(true);
-                var s = "You collected {0} of {1} rings for {2}";
-                if (Score)
-                    Score.text = string.Format(s, stats.currentRingCount, stats.totalRingCount, timeRemaining);
+                StopTimer();
             }
         }
     }
@@ -45,5 +45,14 @@ public class TimeChallenge : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timeDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    void StopTimer()
+    {
+        timerIsRunning = false;
+        ScoreScreen.SetActive(true);
+        Time.timeScale = 0;
+
+        LevelsManager.isTimeLevelCompleted = true;
     }
 }

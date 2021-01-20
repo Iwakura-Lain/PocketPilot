@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: plane
+  m_Name: red
   m_Shader: {fileID: 4800000, guid: 0692e033a6ea9fc4ab311637f4d09ec3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -83,7 +83,7 @@ Material:
     - Color_7A07E306: {r: 0.6981132, g: 0.6195011, b: 0.5499288, a: 0}
     - Color_E9C956F0: {r: 0.8, g: 0.8, b: 0.8, a: 0}
     - _Color: {r: 0.6037736, g: 0, b: 0, a: 1}
-    - _Emission: {r: 0.6431373, g: 0.016836055, b: 0.016836055, a: 1}
+    - _Emission: {r: 1.4980392, g: 0.039215688, b: 0.039215688, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}

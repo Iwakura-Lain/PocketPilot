@@ -35,14 +35,11 @@ public class PlaneMovement : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "Enemy")
             BlowMe();
     }
-
-    public static event DestroyedAction OnDestroyed;
-
+    
     private void BlowMe()
     {
         Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         AfterlifeUI.SetActive(true);
-        OnDestroyed();
         Destroy(gameObject);
     }
 }

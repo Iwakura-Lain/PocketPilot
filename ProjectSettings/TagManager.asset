@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Colapse
   - Ring
+  - Rubic
   layers:
   - Default
   - TransparentFX

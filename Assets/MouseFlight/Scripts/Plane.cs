@@ -6,6 +6,7 @@
 using System;
 using UnityEngine;
 using MFlight;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Plane : MonoBehaviour
@@ -56,10 +57,11 @@ public class Plane : MonoBehaviour
 
     private bool rollOverride = false;
     private bool pitchOverride = false;
-
+    private AudioSource audio;
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
+        audio = GetComponent<AudioSource>();
         Setup();
         Messenger.AddListener("StartLanding", StartLanding);
         Messenger.AddListener("StopLanding", stopLanding);
@@ -84,6 +86,7 @@ public class Plane : MonoBehaviour
 
     private void Update()
     {
+        audio.mute = Time.timeScale == 0;
         rollOverride = false;
         pitchOverride = false;
 
@@ -208,7 +211,10 @@ public class Plane : MonoBehaviour
 
     private void BlowMe()
     {
-        Messenger.Broadcast("Death");
+        if (SceneManager.GetActiveScene().name == "TimeChallenge")
+        {
+            Messenger.Broadcast("Death");
+        }
         Messenger.RemoveListener("StartLanding", StartLanding);
         Messenger.RemoveListener("StopLanding", stopLanding);
         Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);

@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class FakeLoading : MonoBehaviour
 {
-    public bool UseTimer;
     void Start()
     {
         Time.timeScale = 0;
-        
-        if (UseTimer)
-            StartCoroutine(LoadForTime());
     }
 
     void OnLoaded()

@@ -27,7 +27,7 @@ public class Waypoint : MonoBehaviour, IInteractable
 
    private void TurnOff()
    {
-       this.enabled = false;
+       img.enabled = this.enabled = false;
    }
 
    private void UpdateTarget(Transform newTarget)

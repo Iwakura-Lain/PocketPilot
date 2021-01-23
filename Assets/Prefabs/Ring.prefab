@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3706003346119102697}
   - component: {fileID: 5440287920020124174}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Ring
   m_TagString: Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4839,3 +4839,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e130b9965c29464b9ece54147fb8926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ding: {fileID: 8300000, guid: bf80ae32d8b07474eb878126192eb0f0, type: 3}

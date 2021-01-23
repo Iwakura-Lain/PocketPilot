@@ -3,51 +3,27 @@ using UnityEngine;
 
 public class LevelCompleter : MonoBehaviour
 {
-    public Animator[] doors;
-    public Transform[] waypointNew;
     public GameObject Hint;
-    public GameObject LevelCompleteImage;
+    public GameObject PauseMenu;
 
-    public GameObject EndOfDemoScreen;
     private void Start()
     {
         Messenger.AddListener("StopLanding", FirstPieceCollected);
-        //Messenger.AddListener<int>("OnCompleteLevelAction", OpenDoor);
-        Messenger.AddListener("EnemiesAreDestroyed", OpenDoors);
-
     }
 
-    private void OpenDoors()
+    private void Update()
     {
-        foreach (var door in doors)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            door.enabled = true;
+            Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+            PauseMenu.SetActive(!PauseMenu.activeSelf);
         }
     }
 
-    /*public void OpenDoor(int level)
-    {
-        LevelCompleteImage.SetActive(false);
-        if (doors.Length == level)
-        {
-            EndOfDemoScreen.SetActive(true);
-        }
-        else
-        {
-            doors[level].enabled = true;
-            
-            Messenger.Broadcast("NewTarget", waypointNew[level]);
-        }
-    }*/
     void FirstPieceCollected()
     {
         Hint.SetActive(true);
         Time.timeScale = 0;
-    }
-    
-    void LevelFinished()
-    {
-        LevelCompleteImage.SetActive(true);
     }
 
 }

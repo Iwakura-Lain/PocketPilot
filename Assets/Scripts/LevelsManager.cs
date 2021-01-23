@@ -51,4 +51,10 @@ public class LevelsManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().name != "Menu")
+            Cursor.lockState = Time.timeScale > 0 ? CursorLockMode.Locked : CursorLockMode.None;
+    }
 }

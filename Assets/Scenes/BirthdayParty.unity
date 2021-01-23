@@ -13592,14 +13592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c5ce23e52e2b8488bb5bf0ccefc765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors:
-  - {fileID: 0}
-  - {fileID: 0}
-  waypointNew:
-  - {fileID: 0}
   Hint: {fileID: 0}
   LevelCompleteImage: {fileID: 7391043796288453660}
-  EndOfDemoScreen: {fileID: 1159768415}
+  PauseMenu: {fileID: 7285119008489185456}
 --- !u!114 &842528001
 MonoBehaviour:
   m_ObjectHideFlags: 0

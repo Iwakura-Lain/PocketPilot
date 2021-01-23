@@ -7,11 +7,6 @@ using UnityEngine.SceneManagement;
 public class LevelScreen : MonoBehaviour
 {
     private int levelNumber = -1;
-
-    public LevelCompleter levelCompleter;
-    public Plane plane;
-    public Tutorial tutorial;
-
     private void Start()
     {
         Time.timeScale = 0;

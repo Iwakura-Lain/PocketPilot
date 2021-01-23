@@ -219,8 +219,8 @@ public class Plane : MonoBehaviour
         Messenger.RemoveListener("StopLanding", stopLanding);
         Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
         AfterlifeUI.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
         OnDestroyed?.Invoke();
+        Time.timeScale = 0;
         gameObject.SetActive(false);
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.039728265, g: 0.07261378, b: 0.12472587, a: 1}
+  m_IndirectSpecularColor: {r: 0.039700508, g: 0.072617166, b: 0.12497371, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3955,14 +3955,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c5ce23e52e2b8488bb5bf0ccefc765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors:
-  - {fileID: 4236201014947565910}
-  - {fileID: 5175224607881952268}
-  waypointNew:
-  - {fileID: 0}
   Hint: {fileID: 1634649762}
-  LevelCompleteImage: {fileID: 7391043796288453660}
-  EndOfDemoScreen: {fileID: 1625599306}
+  PauseMenu: {fileID: 7285119008489185456}
 --- !u!114 &842528001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3975,9 +3969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572391365eec5d946ad82acde3a5db5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCompleter: {fileID: 842220229}
-  plane: {fileID: 0}
-  tutorial: {fileID: 0}
 --- !u!95 &842528004
 Animator:
   serializedVersion: 3

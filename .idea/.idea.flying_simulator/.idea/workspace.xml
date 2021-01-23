@@ -79,8 +79,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FakeLoading.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Initializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RubicPiece.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TimeChallenge.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
       </list>
     </option>
   </component>

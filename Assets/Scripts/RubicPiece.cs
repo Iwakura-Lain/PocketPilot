@@ -15,23 +15,20 @@ public class RubicPiece : MonoBehaviour, IInteractable
 
     void Update()
     {
-        if ((int) Vector3.Distance(player.position, transform.position) < 5)
-        {
-            if (Inventory.Full)
+        if(player){
+            if ((int) Vector3.Distance(player.position, transform.position) < 5)
             {
-                return;
-            }
-            else
-            {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (!Inventory.Full)
                 {
-                    Messenger.AddListener("OnInteract", Interact);
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        Messenger.AddListener("OnInteract", Interact);
 
-                    progressBar.Play("Base Layer.progressBar", 0, 0);
+                        progressBar.Play("Base Layer.progressBar", 0, 0);
+                    }
                 }
             }
         }
-
     }
 
      public void Interact()

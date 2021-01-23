@@ -13,7 +13,7 @@ public class Initializer : MonoBehaviour
         mouseFlightController = GameObject.FindObjectOfType<MouseFlightController>();
         Cursor.lockState = CursorLockMode.Locked;
         statistics.Init();
-
+        Inventory.Full = false;
         mouseFlightController.Init();
     }
 }

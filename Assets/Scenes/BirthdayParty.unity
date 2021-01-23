@@ -13593,8 +13593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hint: {fileID: 0}
-  LevelCompleteImage: {fileID: 7391043796288453660}
   PauseMenu: {fileID: 7285119008489185456}
+  doors: []
 --- !u!114 &842528001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13607,9 +13607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572391365eec5d946ad82acde3a5db5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCompleter: {fileID: 842220229}
-  plane: {fileID: 0}
-  tutorial: {fileID: 0}
 --- !u!95 &842528004
 Animator:
   serializedVersion: 3
@@ -22908,7 +22905,7 @@ RectTransform:
   - {fileID: 1250279659}
   - {fileID: 2140651075}
   m_Father: {fileID: 3540447682090506198}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -35336,8 +35333,8 @@ RectTransform:
   - {fileID: 734031709}
   - {fileID: 1787755563}
   - {fileID: 1372264521}
-  - {fileID: 1501400803}
   - {fileID: 7285119008489185459}
+  - {fileID: 1501400803}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36786,7 +36783,7 @@ RectTransform:
   - {fileID: 3012157713225783591}
   - {fileID: 4906884716598771900}
   m_Father: {fileID: 3540447682090506198}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

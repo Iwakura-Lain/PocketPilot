@@ -9,7 +9,7 @@ public class WaypointActivator : MonoBehaviour
     public Image waypoint;
     public Text text1;
     public Text text2;
-
+    public bool isWaypointNotNeedeAmynore;
     void Start()
     {
         Messenger.AddListener("CargoTaken", ChangeWaypoint);
@@ -19,7 +19,8 @@ public class WaypointActivator : MonoBehaviour
 
     private void EnableWaypoint()
     {
-        waypoint.enabled = text1.enabled = text2.enabled = true;
+        if(!isWaypointNotNeedeAmynore)
+            waypoint.enabled = text1.enabled = text2.enabled = true;//here bug
     }
     private void ChangeWaypoint()
     {
@@ -29,6 +30,7 @@ public class WaypointActivator : MonoBehaviour
     private void DisableWaypoint()
     {
         waypoint.enabled = text1.enabled = text2.enabled = false;
+        isWaypointNotNeedeAmynore = true;
     }
 
     private void OnTriggerEnter(Collider other) //for doors

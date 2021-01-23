@@ -87,18 +87,14 @@ public class Plane : MonoBehaviour
     private void Update()
     {
         audio.mute = Time.timeScale == 0;
+        
         rollOverride = false;
         pitchOverride = false;
 
         var keyboardRoll = Input.GetAxis("Horizontal")  * 0.1f;
         if (Mathf.Abs(keyboardRoll) > 0) rollOverride = true;
 
-        // var keyboardPitch = Input.GetAxis("Vertical") * 0.1f;
-        // if (Mathf.Abs(keyboardPitch) > 0)
-        // {
-        //     pitchOverride = true;
-        //     rollOverride = true;
-        // }
+
         if (Input.GetKey(KeyCode.W))
         {
             thrust = thrustSpeedUp; 

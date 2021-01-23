@@ -22,7 +22,7 @@ public class TimeChallenge : MonoBehaviour
     }
     void Update()
     {
-        var s = "You collected {0} of 13 rings for {2} seconds";
+        var s = "You collected {0} of 14 rings for {2} seconds";
         if (Score)
             Score.text = string.Format(s, stats.currentRingCount, stats.totalRingCount, Mathf.Round(totalTime - timeRemaining));
         if (timerIsRunning)

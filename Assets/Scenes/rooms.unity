@@ -7938,6 +7938,7 @@ MonoBehaviour:
   waypoint: {fileID: 3540447683243326533}
   text1: {fileID: 2141892541984929910}
   text2: {fileID: 592350251}
+  isWaypointNotNeedeAmynore: 0
 --- !u!65 &1457462030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12251,8 +12252,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9725266, y: 12.538802, z: 0.0000012715659}
-  m_Center: {x: 5.717078, y: -5.4108825, z: 5.397656}
+  m_Size: {x: 15.481298, y: 16.544292, z: 0.0000012715659}
+  m_Center: {x: 11.971461, y: -7.4136634, z: 5.3977513}
 --- !u!65 &1193989238406909110
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.039728265, g: 0.07261378, b: 0.12472587, a: 1}
+  m_IndirectSpecularColor: {r: 0.039700508, g: 0.072617166, b: 0.12497371, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4123,7 +4123,7 @@ PrefabInstance:
     - target: {fileID: 7798892831672926603, guid: c285ee1847b52ca4c9f3241dbc9cb25b,
         type: 3}
       propertyPath: Mute
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c285ee1847b52ca4c9f3241dbc9cb25b, type: 3}
@@ -4146,6 +4146,7 @@ MonoBehaviour:
   - {fileID: 416635577}
   - {fileID: 5175224607881952268}
   - {fileID: 4236201014947565910}
+  audiosources: []
 --- !u!114 &842528001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4727,7 +4728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879297187}
   m_LocalRotation: {x: -0, y: 0.28277203, z: -0, w: 0.9591872}
-  m_LocalPosition: {x: 11.099998, y: 4.69, z: -46.68}
+  m_LocalPosition: {x: -29.3, y: 6.4, z: -56.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1513179463}
@@ -4790,13 +4791,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913866981}
-  m_LocalRotation: {x: -0, y: 0.615783, z: -0, w: 0.78791577}
-  m_LocalPosition: {x: 31.5, y: 3.3, z: -6.97}
+  m_LocalRotation: {x: -0, y: 0.28277203, z: -0, w: 0.9591872}
+  m_LocalPosition: {x: -33.6, y: -19.8, z: -20.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 948864826}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 76.018005, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 32.851, z: 0}
 --- !u!1001 &944910430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6332,13 +6333,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077108700}
-  m_LocalRotation: {x: -0, y: 0.87265426, z: -0, w: 0.48833862}
-  m_LocalPosition: {x: 58.490005, y: 10.19, z: 6.2800026}
+  m_LocalRotation: {x: -0, y: 0.28277203, z: -0, w: 0.9591872}
+  m_LocalPosition: {x: -19.1, y: -24.5, z: -8.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 948864826}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 121.537, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 32.851, z: 0}
 --- !u!23 &1080796045 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5339586747128413065, guid: 48e503b905e12974f9bc12a4d79d0d09,
@@ -11117,7 +11118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029834269}
   m_LocalRotation: {x: -0, y: 0.28277203, z: -0, w: 0.9591872}
-  m_LocalPosition: {x: 56.210007, y: 4.69, z: -2.88}
+  m_LocalPosition: {x: -41.96, y: -20.74, z: 9.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 948864826}
@@ -14605,7 +14606,7 @@ GameObject:
   - component: {fileID: 5753279535732618608}
   - component: {fileID: 6409774135822782138}
   m_Layer: 0
-  m_Name: RubicPiece (2)
+  m_Name: RubicPiece 1
   m_TagString: Rubic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14624,7 +14625,7 @@ GameObject:
   - component: {fileID: 5753279534235527007}
   - component: {fileID: 6409774136076000405}
   m_Layer: 0
-  m_Name: RubicPiece (3)
+  m_Name: RubicPiece 2
   m_TagString: Rubic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14643,7 +14644,7 @@ GameObject:
   - component: {fileID: 5753279534803686764}
   - component: {fileID: 6409774136517095078}
   m_Layer: 0
-  m_Name: RubicPiece (1)
+  m_Name: RubicPiece 3
   m_TagString: Rubic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16449,7 +16450,7 @@ GameObject:
   - component: {fileID: 6648703289921432837}
   - component: {fileID: 5433354041261627087}
   m_Layer: 0
-  m_Name: RubicPiece
+  m_Name: RubicPiece 0
   m_TagString: Rubic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18807,7 +18808,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2ef0c6c4c79fd97449e6e1642f788478, type: 2}
+      objectReference: {fileID: 2100000, guid: 3663c0ad1b966f745a7bf0b40fa31701, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f10f837524655784eb7b02172f514010, type: 3}
 --- !u!23 &5667354704430177564

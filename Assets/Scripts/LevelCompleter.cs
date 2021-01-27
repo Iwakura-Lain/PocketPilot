@@ -7,9 +7,11 @@ public class LevelCompleter : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Loading;
     public Animator[] doors;
+    public AudioSource[] audiosources;
 
     private void Start()
     {
+        audiosources = FindObjectsOfType<AudioSource>();
         Messenger.AddListener("StopLanding", FirstPieceCollected);
         Messenger.AddListener("EnemiesAreDestroyed", OpenDoors);
         Loading = GameObject.Find("Loading");
@@ -28,6 +30,11 @@ public class LevelCompleter : MonoBehaviour
         {
             Time.timeScale = Time.timeScale == 0 ? 1 : 0;
             PauseMenu.SetActive(!PauseMenu.activeSelf);
+        }
+        
+        foreach (var source in audiosources)
+        {
+            source.enabled = Time.timeScale > 0;
         }
     }
 

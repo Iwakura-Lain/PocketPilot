@@ -13,7 +13,6 @@ public class TimeChallenge : MonoBehaviour
     private float timeRemaining;
     public float totalTime = 60;
     public bool timerIsRunning = false;
-    public AudioSource tickingSource;
     private void Start()
     {
         timeRemaining = totalTime;
@@ -27,8 +26,6 @@ public class TimeChallenge : MonoBehaviour
             Score.text = string.Format(s, stats.currentRingCount, stats.totalRingCount, Mathf.Round(totalTime - timeRemaining));
         if (timerIsRunning)
         {
-            tickingSource.mute = Time.timeScale > 0 ;
-
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
@@ -39,11 +36,7 @@ public class TimeChallenge : MonoBehaviour
                 StopTimer();
             }
         }
-
-        else
-        {
-            tickingSource.mute = false;
-        }
+        
     }
     
     void DisplayTime(float timeToDisplay)

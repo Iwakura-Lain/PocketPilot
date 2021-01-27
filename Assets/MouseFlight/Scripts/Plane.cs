@@ -57,11 +57,9 @@ public class Plane : MonoBehaviour
 
     private bool rollOverride = false;
     private bool pitchOverride = false;
-    private AudioSource audio;
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
-        audio = GetComponent<AudioSource>();
         Setup();
         Messenger.AddListener("StartLanding", StartLanding);
         Messenger.AddListener("StopLanding", stopLanding);
@@ -86,8 +84,6 @@ public class Plane : MonoBehaviour
 
     private void Update()
     {
-        audio.mute = Time.timeScale == 0;
-        
         rollOverride = false;
         pitchOverride = false;
 

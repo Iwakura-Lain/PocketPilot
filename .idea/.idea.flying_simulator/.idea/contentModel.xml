@@ -70,8 +70,6 @@
           <e p="StartCountdown.cs" t="Include" />
           <e p="Statistics.cs" t="Include" />
           <e p="TimeChallenge.cs" t="Include" />
-          <e p="Tutorial.cs" t="Include" />
-          <e p="TutorialEnd.cs" t="Include" />
           <e p="Waypoint.cs" t="Include" />
           <e p="WaypointActivator.cs" t="Include" />
           <e p="WaypointPlay.cs" t="Include" />
